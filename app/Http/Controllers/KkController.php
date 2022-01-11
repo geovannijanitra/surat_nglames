@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\KK;
+use App\Models\Penduduk;
 use Illuminate\Http\Request;
 
 class KkController extends Controller
@@ -15,7 +16,8 @@ class KkController extends Controller
     public function index()
     {
         $kk = KK::all();
-        return view('kk.view', compact('kk'));
+        $penduduk = Penduduk::all();
+        return view('kk.view', compact('kk','penduduk'));
     }
 
     /**

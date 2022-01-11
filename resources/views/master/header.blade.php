@@ -53,15 +53,8 @@
 
 
                     <li class="has-submenu">
-                        <a href="#"><i class="md md-class"></i>Data</a>
-                        <ul class="submenu">
-                            <li class="has-menu">
-                                <a href="/kk">Data Keluarga</a>
-                            </li>
-                            <li class="has-menu">
-                                <a href="#">Data Penduduk</a>
-                            </li>
-                        </ul>
+                        <a href="/kk"><i class="md md-class"></i>Data Keluarga</a>
+
                     </li>
 
                     <li class="has-submenu">

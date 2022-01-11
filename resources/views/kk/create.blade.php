@@ -8,11 +8,11 @@
             <p class="text-muted font-13 m-b-30">
                 Masukkan data KK baru
             </p>
-            <form data-parsley-validate method="POST" action="{{url('/kk')}}" enctype="multipart/form-data">
+            <form data-parsley-validate method="POST" action="{{url('/kk')}}" enctype="multipart/form-data" autocomplete="off">
                 @csrf
                 <div class="form-group">
                     <label for="noKk">No KK*</label>
-                    <input type="text" name="noKk" parsley-trigger="change" required placeholder="Masukkan No KK" class="form-control">
+                    <input type="number" name="noKk" parsley-trigger="change" required placeholder="Masukkan No KK" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="alamat">Alamat*</label>
@@ -20,11 +20,11 @@
                 </div>
                 <div class="form-group">
                     <label for="rt">RT*</label>
-                    <input id="rt" name="RT" type="text" placeholder="Masukkan RT" required class="form-control">
+                    <input id="rt" name="RT" type="number" placeholder="Masukkan RT" required class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="rw">RW*</label>
-                    <input id="rw" name="RW" type="text" placeholder="Masukkan RT" required class="form-control">
+                    <input id="rw" name="RW" type="number" placeholder="Masukkan RT" required class="form-control">
                 </div>
 
 

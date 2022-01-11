@@ -14,7 +14,7 @@ class CreateKkTable extends Migration
     public function up()
     {
         Schema::create('kk', function (Blueprint $table) {
-            $table->unsignedInteger('noKk')->unique();
+            $table->bigInteger('noKk')->unsigned()->unique();
             $table->string('alamat');
             $table->string('RT');
             $table->string('RW');
