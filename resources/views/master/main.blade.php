@@ -64,14 +64,12 @@
 
 
 <body>
-
-
     @include('master.header')
-
 
     <div class="wrapper">
         <div class="container">
 
+            @include('flash-message')
             @yield('content')
             @include('master.footer')
 

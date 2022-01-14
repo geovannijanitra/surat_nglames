@@ -18,6 +18,7 @@ class Penduduk extends Model
         'kelamin',
         'agama',
         'status',
+        'statushubungan',
         'pekerjaan',
         'kewarganegaraan',
         'pendidikan',

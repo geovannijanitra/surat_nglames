@@ -21,3 +21,10 @@ Route::get('/', function () {
 
 Route::resource('kk', KkController::class);
 Route::resource('penduduk', PendudukController::class);
+Route::get('penduduk/{id}/add', [KKController::class, 'add']);
+Route::get('penduduk/{id}/keluarga', [KKController::class, 'keluarga']);
+// Route::get('penduduk/{id}/penduduk', [KKController::class, 'penduduk']);
+
+
+
+

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\KK;
 use App\Models\Penduduk;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class KkController extends Controller
 {
@@ -17,7 +18,21 @@ class KkController extends Controller
     {
         $kk = KK::all();
         $penduduk = Penduduk::all();
-        return view('kk.view', compact('kk','penduduk'));
+        $kepalakeluarga = DB::table('penduduk')
+        ->where('status', '=', 'a')
+        ->first();
+        return view('kk.view', compact('kk','penduduk', 'kepalakeluarga'));
+    }
+
+    public function keluarga($id)
+    {
+        $kk = KK::find($id);
+
+        $penduduk = DB::table('penduduk')
+        ->where ('no_kk','=', $kk->noKk)
+        ->get();
+
+        return view('penduduk.view', compact('kk', 'penduduk'));
     }
 
     /**
@@ -28,7 +43,18 @@ class KkController extends Controller
     public function create()
     {
         $kk = KK::all();
-        return view('kk.create', compact('kk'));
+        $penduduk = Penduduk::all();
+        return view('kk.create', compact('kk','penduduk'))->with('success', 'Data berhasil ditambahkan');
+    }
+    public function penduduk($id)
+    {
+        $kk = KK::find($id);
+
+        $penduduk = DB::table('penduduk')
+        ->where('no_kk', '=', $kk->noKk)
+            ->get();
+
+        return view('penduduk.create', compact('kk', 'penduduk'));
     }
 
     /**
@@ -41,7 +67,7 @@ class KkController extends Controller
     {
         $data = $request->all();
         KK::create($data);
-        return redirect('/kk');
+        return redirect('/kk')->with('success', 'Data berhasil ditambahkan');
 
     }
 
@@ -62,10 +88,27 @@ class KkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function add($id)
+    {
+        $penduduk = Penduduk::all();
+        $kk = KK::find($id);
+
+        return view('penduduk.create', compact('penduduk','kk'))->with('success', 'Data berhasil ditambahkan');
+    }
+
+    public function read($id)
+    {
+        $penduduk = Penduduk::all();
+        $kk = KK::find($id);
+
+        return view('kk.create', compact('penduduk', 'kk'));
+    }
+
     public function edit($id)
     {
         $kk = KK::find($id);
-        return view('kk.update', compact('kk'));
+        return view('kk.update', compact('kk'))->with('warning', 'Data berhasil diperbarui');;
     }
 
     /**
@@ -85,7 +128,7 @@ class KkController extends Controller
             'RW' => $request->RW,
 
         ]);
-        return redirect('kk');
+        return redirect('kk')->with('warning', 'Data berhasil diperbarui');;
     }
 
     /**
@@ -97,6 +140,6 @@ class KkController extends Controller
     public function destroy(KK $kk)
     {
         KK::destroy($kk->noKk);
-        return redirect('/kk');
+        return redirect('/kk')->with('error', 'Data berhasil dihapus');;
     }
 }

@@ -23,6 +23,7 @@ class CreatePendudukTable extends Migration
             $table->string('kelamin');
             $table->string('agama');
             $table->string('status');
+            $table->string('statushubungan');
             $table->string('pekerjaan');
             $table->string('kewarganegaraan');
             $table->string('pendidikan');

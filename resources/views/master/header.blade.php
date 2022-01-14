@@ -18,7 +18,7 @@
 
 
                     <li class="dropdown navbar-c-items">
-                        <a href="" class="dropdown-toggle waves-effect waves-light profile" data-toggle="dropdown" aria-expanded="true"><img src="{{asset('menu_2')}}/assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle"> </a>
+                        <a href="" class="dropdown-toggle waves-effect waves-light profile" data-toggle="dropdown" aria-expanded="true"><img src="{{asset('menu_2')}}/assets/images/users/avatar-10.jpg" alt="user-img" class="img-circle"> </a>
                         <ul class="dropdown-menu">
                             <li><a href="javascript:void(0)"><i class="ti-user text-custom m-r-10"></i> Profile</a></li>
                             <li><a href="javascript:void(0)"><i class="ti-power-off text-danger m-r-10"></i> Logout</a></li>
@@ -47,18 +47,23 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
                     <li class="has-submenu">
-                        <a href="#"><i class="md md-dashboard"></i>Dashboard</a>
+                        <a href="/"><i class="md md-dashboard"></i>Dashboard</a>
+
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="/perangkat"><i class="md md-group"></i>Perangkat Desa</a>
 
                     </li>
 
 
                     <li class="has-submenu">
-                        <a href="/kk"><i class="md md-class"></i>Data Keluarga</a>
+                        <a href="/kk"><i class="md md-my-library-books"></i>Data Keluarga</a>
 
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"><i class="md md-layers"></i>Kebutuhan</a>
+                        <a href="#"><i class="md md-content-copy"></i>Kebutuhan</a>
                         <ul class="submenu megamenu">
                             <li>
                                 <ul>

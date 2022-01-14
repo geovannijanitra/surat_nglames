@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Penduduk;
 use App\Http\Requests\StorePendudukRequest;
 use App\Http\Requests\UpdatePendudukRequest;
-use GuzzleHttp\Psr7\Request;
+use App\Models\KK;
+use Illuminate\Http\Request;
 
 class PendudukController extends Controller
 {
@@ -28,8 +29,10 @@ class PendudukController extends Controller
     public function create()
     {
         $penduduk = Penduduk::all();
-        return view('penduduk.create', compact('penduduk'));
+        return view('penduduk.create', compact('penduduk'))->with('success', 'Data berhasil ditambahkan');
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -37,11 +40,11 @@ class PendudukController extends Controller
      * @param  \App\Http\Requests\StorePendudukRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePendudukRequest $request)
+    public function store(Request $request)
     {
         $data = $request->all();
         Penduduk::create($data);
-        return redirect('/penduduk');
+        return back()->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
@@ -64,8 +67,11 @@ class PendudukController extends Controller
     public function edit($id)
     {
         $penduduk = Penduduk::find($id);
+
         return view('penduduk.update', compact('penduduk'));
     }
+
+
 
     /**
      * Update the specified resource in storage.
@@ -92,7 +98,9 @@ class PendudukController extends Controller
             'namaAyah' => $request->namaAyah,
             'namaIbu' => $request->namaIbu,
         ]);
-        return redirect('kk');
+
+        return redirect()->back()->with('warning', 'Data berhasil diperbarui');
+
     }
 
     /**
@@ -104,6 +112,6 @@ class PendudukController extends Controller
     public function destroy(Penduduk $penduduk)
     {
         Penduduk::destroy($penduduk->nik);
-        return redirect('/penduduk');
+        return redirect()->back()->with('error', 'Data berhasil dihapus');
     }
 }
