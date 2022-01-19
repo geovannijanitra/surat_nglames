@@ -60,13 +60,13 @@
 			<tr>
 				<td>
                     <center>
-                        <font size="16px"><b><u>SURAT KETERANGAN DOMISILI</u></b></font></td>
+                        <font size="16px"><b><u>SURAT KETERANGAN</u></b></font></td>
                     </center>
 			</tr>
 			<tr>
 				<td>
                     <center>
-                        <font size="16px">Nomor : 470/ ... /402.409.01/</font>
+                        <font size="16px">Nomor : 331/ ... /402.409.01/</font>
                     </center>
                 </td>
 			</tr>
@@ -94,7 +94,7 @@
 			       <font size="16px">Dengan ini menerangkan bahwa</font>
 		       </td>
 		    </tr>
-		</table>
+		</table><br>
 		<table width="350">
 			<tr>
 				<td width="150"><font size="16px">a. &emsp; Nama</font></td>
@@ -128,26 +128,26 @@
 				<td><font size="16px">: &emsp;Creative Director</font></td>
 			</tr>
             <tr>
-				<td width="150"><font size="16px">b. &emsp; Alamat</font></td>
+				<td width="150"><font size="16px">i. &emsp; Alamat</font></td>
 				<td><font size="16px">: &emsp;Manisrejo, Madiun</font></td>
 			</tr>
 		</table><br>
 		<table width="400">
             <tr>
 				<td width="15px"><font size="16px">2. </font></td>
-				<td><font size="16px">Menerangkan bahwa orang tersebut di atas benar-benar berdomisili di RT ...</font></td>
+				<td><font size="16px">Menerangkan bahwa orang tersebut benar-benar penduduk Kelurahan Nglames</font></td>
 			</tr>
             <tr>
 				<td width="15px"><font size="16px" class="text2">2. </font></td>
-				<td><font size="16px">RW …..Kel Nglames Kec/Kab Madiun, dan memiliki usaha </font></td>
+				<td><font size="16px">Kecamatan Madiun Kabupaten Madiun.</font></td>
 			</tr>
             <tr>
 				<td width="15px"><font size="16px">3. </font></td>
-				<td><font size="16px">Surat keterangan ini dipergunakan untuk persyaratan pengajuan pinjaman di</font></td>
+				<td><font size="16px">Surat Keterangan ini dipergunakan untuk permohonan  SKCK guna melamar</font></td>
 			</tr>
             <tr>
 				<td width="15px"><font size="16px" class="text2">3. </font></td>
-				<td><font size="16px">....</font></td>
+				<td><font size="16px">pekerjaan.</font></td>
 			</tr>
 		</table>
 		<br>
@@ -158,7 +158,7 @@
                 </td>
             </tr>
 		</table>
-		<br><br>
+		<br>
 		<table class="ttd" width="400">
 			<tr>
 				<td><font size="16px" class="text2"> - </font></td>

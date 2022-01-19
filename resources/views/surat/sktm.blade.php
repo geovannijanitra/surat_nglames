@@ -7,6 +7,7 @@
 			border-style: double;
 			border-width: 3px;
 			border-color: white;
+
   			margin-left: auto;
   			margin-right: auto;
         }
@@ -60,7 +61,7 @@
 			<tr>
 				<td>
                     <center>
-                        <font size="16px"><b><u>SURAT KETERANGAN DOMISILI</u></b></font></td>
+                        <font size="16px"><b><u>SURAT KETERANGAN</u></b></font></td>
                     </center>
 			</tr>
 			<tr>
@@ -108,46 +109,48 @@
 				<td width="150"><font size="16px">c. &emsp; Tempat, Tanggal Lahir</font></td>
 				<td><font size="16px">: &emsp;Madiun, 27 November 1999</font></td>
             <tr>
-				<td width="150"><font size="16px">d. &emsp; Umur</font></td>
-				<td><font size="16px">: &emsp;22</font></td>
-			</tr>
-            <tr>
-				<td width="150"><font size="16px">e. &emsp; Jenis Kelamin</font></td>
-				<td><font size="16px">: &emsp;Laki-laki</font></td>
-			</tr>
-            <tr>
-				<td width="150"><font size="16px">f. &emsp; Agama</font></td>
+				<td width="150"><font size="16px">d. &emsp; Agama</font></td>
 				<td><font size="16px">: &emsp;Islam</font></td>
 			</tr>
             <tr>
-				<td width="150"><font size="16px">g. &emsp; Kebangsaan</font></td>
-				<td><font size="16px">: &emsp;Indonesia</font></td>
-			</tr>
-            <tr>
-				<td width="150"><font size="16px">h. &emsp; Pekerjaan</font></td>
+				<td width="150"><font size="16px">e. &emsp; Pekerjaan</font></td>
 				<td><font size="16px">: &emsp;Creative Director</font></td>
 			</tr>
             <tr>
-				<td width="150"><font size="16px">b. &emsp; Alamat</font></td>
+				<td width="150"><font size="16px">f. &emsp; Alamat</font></td>
 				<td><font size="16px">: &emsp;Manisrejo, Madiun</font></td>
 			</tr>
 		</table><br>
 		<table width="400">
             <tr>
 				<td width="15px"><font size="16px">2. </font></td>
-				<td><font size="16px">Menerangkan bahwa orang tersebut di atas benar-benar berdomisili di RT ...</font></td>
+				<td><font size="16px">Berdasarkan surat pernyataan yang bersangkutan tanggal 11 Desember 2029</font></td>
 			</tr>
             <tr>
 				<td width="15px"><font size="16px" class="text2">2. </font></td>
-				<td><font size="16px">RW …..Kel Nglames Kec/Kab Madiun, dan memiliki usaha </font></td>
+				<td><font size="16px">bahwa orang tersebut benar-benar penduduk Kelurahan Nglames Kecamatan</font></td>
+			</tr>
+            <tr>
+				<td width="15px"><font size="16px" class="text2">2. </font></td>
+				<td><font size="16px">Madiun Kabupaten Madiun dan perekonomiannya kurang mampu.</font></td>
 			</tr>
             <tr>
 				<td width="15px"><font size="16px">3. </font></td>
-				<td><font size="16px">Surat keterangan ini dipergunakan untuk persyaratan pengajuan pinjaman di</font></td>
+				<td><font size="16px">Surat Keterangan ini dipergunakan untuk permohonan keringanan biaya</font></td>
 			</tr>
             <tr>
 				<td width="15px"><font size="16px" class="text2">3. </font></td>
-				<td><font size="16px">....</font></td>
+				<td><font size="16px">sekolah anaknya.</font></td>
+			</tr>
+		</table>
+        <table width="300">
+			<tr>
+				<td width="150"><font size="16px">a. &emsp; Nama</font></td>
+				<td><font size="16px">: &emsp;Dora the Hunter</font></td>
+			</tr>
+            <tr>
+				<td width="150"><font size="16px">b. &emsp; Sekolah</font></td>
+				<td><font size="16px">: &emsp;SDN 1 Nglames</font></td>
 			</tr>
 		</table>
 		<br>
@@ -173,7 +176,6 @@
     			<td><font size="16px">Alfreds Futterkiste</font></td>
     			<td><font size="16px">Maria Anders</font></td>
   			</tr>
-
 	    </table>
 	</center>
 </body>
