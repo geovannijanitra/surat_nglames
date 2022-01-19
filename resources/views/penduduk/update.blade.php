@@ -23,7 +23,7 @@
                     <div class="form-group">
                         <label class="col-md-2 control-label">NIK</label>
                         <div class="col-md-10">
-                            <input type="number" name="nik" id="nik" class="form-control" placeholder="Masukkan NIK" value="{{$penduduk->nik}}" required>
+                            <input min="1111111111111111" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;" name="nik" id="nik" class="form-control" placeholder="Masukkan NIK" value="{{$penduduk->nik}}" required>
                         </div>
                     </div>
                     <div class="form-group">

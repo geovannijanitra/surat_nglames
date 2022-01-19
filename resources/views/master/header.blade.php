@@ -70,7 +70,7 @@
                                     <li>
                                         <span>Surat Keterangan</span>
                                     </li>
-                                    <li><a href="components-grid.html">Surat Keterangan</a></li>
+                                    <li><a href="/surat">Surat Keterangan</a></li>
                                     <li><a href="components-widgets.html">Belum Kawin</a></li>
                                     <li><a href="components-nestable-list.html">Penghasilan</a></li>
                                     <li><a href="components-range-sliders.html">Usaha</a></li>

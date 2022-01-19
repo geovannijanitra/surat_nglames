@@ -14,8 +14,16 @@ class CreateSuratTable extends Migration
     public function up()
     {
         Schema::create('surat', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->bigInteger('idSurat')->unique()->autoIncrement();
+            $table->bigInteger('nik')->unsigned();
+            $table->foreign('nik')->references('nik')->on('penduduk')->onUpdate('cascade');
+            $table->bigInteger('tandatangan')->unsigned()->nullable();
+            $table->foreign('tandatangan')->references('idPerangkat')->on('perangkat')->onUpdate('cascade');
+            $table->string('noSurat');
+            $table->string('jenisSurat');
+            $table->string('keperluan')->nullable();
+            $table->string('tanggalSurat')->nullable();
+            $table->string('umurPenduduk')->nullable();
         });
     }
 

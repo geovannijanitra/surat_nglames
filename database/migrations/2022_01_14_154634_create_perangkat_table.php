@@ -14,7 +14,17 @@ class CreatePerangkatTable extends Migration
     public function up()
     {
         Schema::create('perangkat', function (Blueprint $table) {
-            $table->id();
+            $table->bigInteger('idPerangkat')->unique()->unsigned()->autoIncrement();
+            $table->string('nama');
+            $table->date('tanggalLahir');
+            // $table->string('pekerjaan');
+            $table->string('jabatan');
+            $table->string('detail');
+            $table->string('alamat');
+            // $table->string('kelurahan');
+            // $table->string('kecamatan');
+            // $table->string('kota');
+            // $table->string('provinsi');
             $table->timestamps();
         });
     }

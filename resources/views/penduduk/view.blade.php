@@ -55,7 +55,7 @@
 
                         </td> -->
                         <td>
-                            <a href="/penduduk/{{ $penduduk->nik }}/edit" class="btn btn-icon waves-effect waves-light btn-primary col-md-5"> <i class="fa fa-wrench"></i></a>
+                            <a href="/penduduk/{{ $penduduk->nik }}/edit" class="btn btn-icon waves-effect waves-light btn-primary col-md-5"> <i class="fa fa-edit"></i></a>
                             <form action="/penduduk/{{ $penduduk->nik }}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
@@ -91,7 +91,7 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label">NIK</label>
                             <div class="col-md-10">
-                                <input type="number" name="nik" id="nik" class="form-control" placeholder="Masukkan NIK" required>
+                                <input min="1111111111111111" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;" name="nik" id="nik" class="form-control" placeholder="Masukkan NIK" required>
                             </div>
                         </div>
                         <div class="form-group">

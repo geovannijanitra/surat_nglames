@@ -13,7 +13,7 @@
                 @method('PATCH')
                 <div class="form-group">
                     <label for="noKk">No KK*</label>
-                    <input type="text" name="noKk" parsley-trigger="change" required placeholder="Masukkan No KK" class="form-control" value="{{$kk->noKk}}">
+                    <input min="1111111111111111" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;" name="noKk" parsley-trigger="change" required placeholder="Masukkan No KK" class="form-control" value="{{$kk->noKk}}">
                 </div>
                 <div class="form-group">
                     <label for="alamat">Alamat*</label>

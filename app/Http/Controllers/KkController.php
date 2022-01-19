@@ -128,7 +128,7 @@ class KkController extends Controller
             'RW' => $request->RW,
 
         ]);
-        return redirect('kk')->with('warning', 'Data berhasil diperbarui');;
+        return redirect('kk')->with('warning', 'Data berhasil diperbarui');
     }
 
     /**
@@ -140,6 +140,6 @@ class KkController extends Controller
     public function destroy(KK $kk)
     {
         KK::destroy($kk->noKk);
-        return redirect('/kk')->with('error', 'Data berhasil dihapus');;
+        return redirect('/kk')->with('error', 'Data berhasil dihapus');
     }
 }

@@ -14,7 +14,7 @@ class CreatePendudukTable extends Migration
     public function up()
     {
         Schema::create('penduduk', function (Blueprint $table) {
-            $table->bigInteger('nik')->unique()->unique();;
+            $table->bigInteger('nik')->unique()->unsigned();;
             $table->bigInteger('no_kk')->unsigned();
             $table->foreign('no_kk')->references('noKk')->on('kk')->onUpdate('cascade');
             $table->string('nama');
