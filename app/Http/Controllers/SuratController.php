@@ -98,7 +98,7 @@ class SuratController extends Controller
         $penduduk = Penduduk::where('nik', $surat->nik)->first();
         $kk = KK::where('noKk', $penduduk->no_kk)->first();
 
-        $pdf = PDF::loadView('surat.sktm', [
+        $pdf = PDF::loadView('surat.lahir', [
             'noSurat' => $surat->noSurat,
             'tanggalSurat' => $surat->tanggalSurat,
             'keperluan' => $surat->keperluan,

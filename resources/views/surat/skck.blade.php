@@ -80,7 +80,7 @@
 		<table width="350">
 			<tr>
 				<td width="150"><font size="16px">a. &emsp; Nama</font></td>
-				<td><font size="16px">: &emsp;aaa</font></td>
+				<td><font size="16px">: &emsp;Pak Supriyono</font></td>
 			</tr>
             <tr>
 				<td width="150"><font size="16px">b. &emsp; Tanggal</font></td>
@@ -135,11 +135,11 @@
 		<table width="400">
             <tr>
 				<td width="15px"><font size="16px">2. </font></td>
-				<td><font size="16px">Menerangkan bahwa orang tersebut benar-benar penduduk Kelurahan Nglames</font></td>
+				<td><font size="16px">Menerangkan bahwa orang tersebut benar-benar penduduk Kel. Nglames</font></td>
 			</tr>
             <tr>
 				<td width="15px"><font size="16px" class="text2">2. </font></td>
-				<td><font size="16px">Kecamatan Madiun Kabupaten Madiun.</font></td>
+				<td><font size="16px">Kec/Kab. Madiun Madiun.</font></td>
 			</tr>
             <tr>
 				<td width="15px"><font size="16px">3. </font></td>

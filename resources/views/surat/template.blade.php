@@ -80,11 +80,11 @@
 		<table width="350">
 			<tr>
 				<td width="150"><font size="16px">a. &emsp; Nama</font></td>
-				<td><font size="16px">: &emsp;aaa</font></td>
+				<td><font size="16px">: &emsp;Pak Supriyono</font></td>
 			</tr>
             <tr>
 				<td width="150"><font size="16px">b. &emsp; Tanggal</font></td>
-				<td><font size="16px">: &emsp;bbb</font></td>
+				<td><font size="16px">: &emsp;27 Pahing 719</font></td>
 			</tr>
 		</table>
 		<br>
@@ -111,10 +111,10 @@
 				<td width="150"><font size="16px">d. &emsp; Umur</font></td>
 				<td><font size="16px">: &emsp;22</font></td>
 			</tr>
-            <tr>
+            <trh>
 				<td width="150"><font size="16px">e. &emsp; Jenis Kelamin</font></td>
 				<td><font size="16px">: &emsp;Laki-laki</font></td>
-			</tr>
+			</trh
             <tr>
 				<td width="150"><font size="16px">f. &emsp; Agama</font></td>
 				<td><font size="16px">: &emsp;Islam</font></td>
@@ -128,7 +128,7 @@
 				<td><font size="16px">: &emsp;Creative Director</font></td>
 			</tr>
             <tr>
-				<td width="150"><font size="16px">b. &emsp; Alamat</font></td>
+				<td width="150"><font size="16px">i. &emsp; Alamat</font></td>
 				<td><font size="16px">: &emsp;Manisrejo, Madiun</font></td>
 			</tr>
 		</table><br>
@@ -139,7 +139,7 @@
 			</tr>
             <tr>
 				<td width="15px"><font size="16px" class="text2">2. </font></td>
-				<td><font size="16px">RW …..Kel Nglames Kec/Kab Madiun, dan memiliki usaha </font></td>
+				<td><font size="16px">RW …..Kel Nglames Kec/Kab Madiun, dan memiliki usaha ... </font></td>
 			</tr>
             <tr>
 				<td width="15px"><font size="16px">3. </font></td>
