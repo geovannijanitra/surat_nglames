@@ -27,14 +27,31 @@
         .right-side{
             border-right: 1px solid black;
         }
+        .right-side-end{
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        /* .left-side-end{
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+        } */
+        .bottom{
+            border-bottom: 1px solid black
+        }
         .center{
             border-style: double;
 			border-width: 3px;
 			border-color: black;
         }
-        table td .text2 {
+        td.text2 {
             color: white;
+            border-left: 1px solid black;
 		}
+        td.text2-end{
+            color: white;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+        }
 
         td.white{
             color: white;
@@ -52,7 +69,7 @@
                 <tr>
                     <td  colspan="2" ><font size="12px"> Desa/Kelurahan</font></td>
                     <td><font size="12px">: NGLAMES</font></td>
-                    <td class="white"><font size="12px">%%%%%%%%%%%%%%%%%%%%%%</font></td>
+                    <td class="white"><font size="12px">%%%%%%%%%%%%%%%%%%%%%%%%%%%%</font></td>
                     <td><font size="12px">Ket : </font></td>
                     <td><font size="12px">Lembar 1 Dispendukcapil</font></td>
                 </tr>
@@ -60,21 +77,21 @@
                     <td 1 colspan="2"  ><font size="12px"> Kecamatan</font></td>
                     <td><font size="12px">: MADIUN</font></td>
                     <td class="white"><font size="12px">-</font></td>
-                    <td><font size="12px" class="text2">Ket : </font></td>
+                    <td  class="white"><font size="12px">Ket : </font></td>
                     <td><font size="12px">Lembar 2 Untuk yang bersangkutan</font></td>
                 </tr>
                 <tr>
                     <td  colspan="2" ><font size="12px"> Kabupaten/Kota</font></td>
                     <td><font size="12px">: MADIUN</font></td>
                     <td class="white"><font size="12px">-</font></td>
-                    <td><font size="12px" class="text2">Ket : </font></td>
+                    <td  class="white"><font size="12px">Ket : </font></td>
                     <td><font size="12px">Lembar 3 Untuk Desa/Kelurahan</font></td>
                 </tr>
                 <tr>
-                    <td  colspan="2" ><font size="12px" class="text2"> Kecamatan</font></td>
-                    <td ><font size="12px" class="text2">: MADIUN</font></td>
-                    <td ><font size="12px" class="text2">-</font></td>
-                    <td><font size="12px" class="text2">Ket : </font></td>
+                    <td  class="white"  colspan="2" ><font size="12px"> Kecamatan</font></td>
+                    <td  class="white" ><font size="12px">: MADIUN</font></td>
+                    <td  class="white" ><font size="12px">-</font></td>
+                    <td  class="white"><font size="12px">Ket : </font></td>
                     <td><font size="12px">Lembar 4 Untuk Kecamatan</font></td>
                 </tr>
                 <tr>
@@ -88,7 +105,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  colspan="2"><font size="12px"> Nama Kepala Keluarga</font></td>
+                    <td colspan="2"><font size="12px"> Nama Kepala Keluarga</font></td>
                     <td colspan="4"><font size="12px">: Bapak Siapa</font></td>
                 </tr>
                 <tr>
@@ -100,31 +117,31 @@
                 </tr>
                 <tr>
 
-                    <td class="side" colspan="2" width="100"><font size="12px">1.  Nama</font></td>
-                    <td colspan="4"><font size="12px">: Uchiha Sasuke</font></td>
+                    <td class="left-side" class="side" colspan="2" width="100"><font size="12px">1.  Nama</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: Uchiha Sasuke</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Jenis Kelamin</font></td>
-                    <td  colspan="4"><font size="12px">: Laki-Laki</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Jenis Kelamin</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Laki-Laki</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">3.  Tempat Dilahirkan</font></td>
-                    <td  colspan="4"><font size="12px">: Puskesmas</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3.  Tempat Dilahirkan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Puskesmas</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">4.  Tempat Kelahiran</font></td>
-                    <td  colspan="4"><font size="12px">: Markas Klan Uchiha</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Tempat Kelahiran</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Markas Klan Uchiha</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">5.  Hari dan Tanggal Lahir</font></td>
-                    <td  colspan="4"><font size="12px">: Senin 27/11/1999</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">5.  Hari dan Tanggal Lahir</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Senin 27/11/1999</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">6.  Pukul</font></td>
-                    <td colspan="4"><font size="12px">: 19.42</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">6.  Pukul</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 19.42</font></td>
                     {{-- <td><font size="12px">Kode Prov </font></td>
                     <td><font size="12px">: 61</font></td>
                     <td><font size="12px">Kode Kab </font></td>
@@ -133,13 +150,13 @@
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">7.  Jenis Kelahiran</font></td>
-                    <td  colspan="4"><font size="12px">: Ganda Putra</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">7.  Jenis Kelahiran</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Ganda Putra</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">8.  Kelahiran ke</font></td>
-                    <td  colspan="4"><font size="12px">: 2</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">8.  Kelahiran ke</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: 2</font></td>
                 </tr>
                 {{-- <tr>
 
@@ -163,18 +180,18 @@
                 </tr> --}}
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">9. Penolong Kelahiran</font></td>
-                    <td  colspan="4"><font size="12px">: Dukun</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">9. Penolong Kelahiran</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Dukun</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">10. Berat Bayi </font></td>
-                    <td  colspan="4"><font size="12px">: 4 kg</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">10. Berat Bayi </font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: 4 kg</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">11. Panjang Bayi</font></td>
-                    <td  colspan="4"><font size="12px">: 2 Km</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">11. Panjang Bayi</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: 2 Km</font></td>
                 </tr>
 
                 <tr>
@@ -182,53 +199,53 @@
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">1.  NIK</font></td>
-                    <td colspan="4"><font size="12px">: 3577032711990002</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">1.  NIK</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 3577032711990002</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha Motoki</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha Motoki</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
                     <td  colspan="2"><font size="12px">: 21/04/1982</font></td>
                     <td><font size="12px"> Umur :</font></td>
-                    <td><font size="12px"> 29</font></td>
+                    <td class="right-side"><font size="12px"> 29</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
-                    <td  colspan="4"><font size="12px">: Ibu Rumah Tangga</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Ibu Rumah Tangga</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
-                    <td  colspan="4"><font size="12px">: Jl Pojok 13 Uhuy</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Jl Pojok 13 Uhuy</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">a.Desa/Kelurahan</font></td>
                     <td ><font size="12px">: Konoha</font></td>
                     <td ><font size="12px">c. Kab/Kota</font></td>
-                    <td ><font size="12px">: Konoha</font></td>
+                    <td class="right-side" ><font size="12px">: Konoha</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">b.KECAMATAN</font></td>
                     <td ><font size="12px">: Konoha</font></td>
                     <td ><font size="12px">d. Provinsi</font></td>
-                    <td ><font size="12px">: Konoha Selatan</font></td>
+                    <td class="right-side" ><font size="12px">: Konoha Selatan</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">6.  Kewarganegaraan</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">6.  Kewarganegaraan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">7.  Kebangsaan</font></td>
-                    <td  colspan="4"><font size="12px">: Dunia Ninja</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">7.  Kebangsaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Dunia Ninja</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">8.  Tgl Pencatatan Perkawinan</font></td>
-                    <td  colspan="4"><font size="12px">: Ibu Rumah Tangga</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">8.  Tgl Pencatatan Perkawinan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Ibu Rumah Tangga</font></td>
                 </tr>
                 <tr>
                     <td class="border" colspan="6"><font size="12px"><b>AYAH</b></font></td>
@@ -236,167 +253,167 @@
 
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">1.  NIK</font></td>
-                    <td colspan="4"><font size="12px">: 3577032711990002</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">1.  NIK</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 3577032711990002</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha Motoki</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha Motoki</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
                     <td  colspan="2"><font size="12px">: 21/04/1982</font></td>
                     <td><font size="12px"> Umur :</font></td>
-                    <td><font size="12px"> 29</font></td>
+                    <td class="right-side"><font size="12px"> 29</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
-                    <td  colspan="4"><font size="12px">: Ibu Rumah Tangga</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Ibu Rumah Tangga</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
-                    <td  colspan="4"><font size="12px">: Jl Pojok 13 Uhuy</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Jl Pojok 13 Uhuy</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">a.Desa/Kelurahan</font></td>
                     <td ><font size="12px">: Konoha</font></td>
                     <td ><font size="12px">c. Kab/Kota</font></td>
-                    <td ><font size="12px">: Konoha</font></td>
+                    <td class="right-side" ><font size="12px">: Konoha</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">b.KECAMATAN</font></td>
                     <td ><font size="12px">: Konoha</font></td>
                     <td ><font size="12px">d. Provinsi</font></td>
-                    <td ><font size="12px">: Konoha Selatan</font></td>
+                    <td class="right-side" ><font size="12px">: Konoha Selatan</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">6.  Kewarganegaraan</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">6.  Kewarganegaraan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">7.  Kebangsaan</font></td>
-                    <td  colspan="4"><font size="12px">: Dunia Ninja</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">7.  Kebangsaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Dunia Ninja</font></td>
                 </tr>
                 <tr>
                     <td class="border" colspan="6"><font size="12px"><b>PELAPOR</b></font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">1.  NIK</font></td>
-                    <td colspan="4"><font size="12px">: 3577032711990002</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">1.  NIK</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 3577032711990002</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">3. Umur</font></td>
-                    <td colspan="4"><font size="12px"> 21 detik</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3. Umur</font></td>
+                    <td class="right-side" colspan="4"><font size="12px"> 21 detik</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">4.  Jenis Kelamin</font></td>
-                    <td  colspan="4"><font size="12px">: Universal</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Jenis Kelamin</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Universal</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">5.  Pekerjaan</font></td>
-                    <td  colspan="4"><font size="12px">: Mata-mata</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">5.  Pekerjaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Mata-mata</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">6.  Alamat</font></td>
-                    <td  colspan="4"><font size="12px">: Yakali dikasi tau, kan mata-mata</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">6.  Alamat</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Yakali dikasi tau, kan mata-mata</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">a.Desa/Kelurahan</font></td>
                     <td ><font size="12px">: NGLAMES</font></td>
                     <td ><font size="12px">c. Kab/Kota</font></td>
-                    <td ><font size="12px">: MADIUN</font></td>
+                    <td class="right-side" ><font size="12px">: MADIUN</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">b.KECAMATAN</font></td>
                     <td ><font size="12px">: MADIUN</font></td>
                     <td ><font size="12px">d. Provinsi</font></td>
-                    <td ><font size="12px">: JAWA TIMUR</font></td>
+                    <td class="right-side" ><font size="12px">: JAWA TIMUR</font></td>
                 </tr>
                 <tr>
                     <td class="border" colspan="6"><font size="12px"><b>SAKSI 1</b></font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">1.  NIK</font></td>
-                    <td colspan="4"><font size="12px">: 3577032711990002</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">1.  NIK</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 3577032711990002</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">3. Umur</font></td>
-                    <td colspan="4"><font size="12px"> 21 detik</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3. Umur</font></td>
+                    <td class="right-side" colspan="4"><font size="12px"> 21 detik</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
-                    <td  colspan="4"><font size="12px">: Mata-mata</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Mata-mata</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
-                    <td  colspan="4"><font size="12px">: Yakali dikasi tau, kan mata-mata</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Yakali dikasi tau, kan mata-mata</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">a.Desa/Kelurahan</font></td>
                     <td ><font size="12px">: NGLAMES</font></td>
                     <td ><font size="12px">c. Kab/Kota</font></td>
-                    <td ><font size="12px">: MADIUN</font></td>
+                    <td class="right-side" ><font size="12px">: MADIUN</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">b.KECAMATAN</font></td>
                     <td ><font size="12px">: MADIUN</font></td>
                     <td ><font size="12px">d. Provinsi</font></td>
-                    <td ><font size="12px">: JAWA TIMUR</font></td>
+                    <td class="right-side" ><font size="12px">: JAWA TIMUR</font></td>
                 </tr>
                 <tr>
                     <td class="border" colspan="6"><font size="12px"><b>SAKSI 2</b></font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">1.  NIK</font></td>
-                    <td colspan="4"><font size="12px">: 3577032711990002</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">1.  NIK</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 3577032711990002</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">3. Umur</font></td>
-                    <td colspan="4"><font size="12px"> 21 detik</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3. Umur</font></td>
+                    <td class="right-side" colspan="4"><font size="12px"> 21 detik</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
-                    <td  colspan="4"><font size="12px">: Mata-mata</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Mata-mata</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
-                    <td  colspan="4"><font size="12px">: Yakali dikasi tau, kan mata-mata</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Yakali dikasi tau, kan mata-mata</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">a.Desa/Kelurahan</font></td>
                     <td ><font size="12px">: NGLAMES</font></td>
                     <td ><font size="12px">c. Kab/Kota</font></td>
-                    <td ><font size="12px">: MADIUN</font></td>
+                    <td class="right-side" ><font size="12px">: MADIUN</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
-                    <td ><font size="12px">b.KECAMATAN</font></td>
-                    <td ><font size="12px">: MADIUN</font></td>
-                    <td ><font size="12px">d. Provinsi</font></td>
-                    <td ><font size="12px">: JAWA TIMUR</font></td>
+                    <td colspan="2" width="100" class="text2-end"><font size="12px">8.  Alamat</font></td>
+                    <td class="bottom" ><font size="12px">b.KECAMATAN</font></td>
+                    <td class="bottom" ><font size="12px">: MADIUN</font></td>
+                    <td class="bottom" ><font size="12px">d. Provinsi</font></td>
+                    <td class="right-side-end" ><font size="12px">: JAWA TIMUR</font></td>
                 </tr>
 
 		    </table>
@@ -587,12 +604,12 @@
 		<br>
 		<table class="ttd" width="500">
 			<tr>
-				<td><font size="12px" class="text2"> - </font></td>
-				<td><font size="12px">Madiun, 29 Februari 1781</font></td>
+				<td><font size="12px"> Mengetahui </font></td>
+				<td  class="white"><font size="12px">-</font></td>
 			</tr>
         	<tr>
-    			<th><font size="12px">Yang Berhak Tanda Tangan</font></th>
-    			<th><font size="12px">LURAH NGLAMES</font></th>
+    			<th><font size="12px">Kepala Desa / Lurah</font></th>
+    			<th><font size="12px">Pelapor</font></th>
   			</tr>
             <tr> <td  colspan="3" height="10"><img src="transp.gif" alt="" width="1" height="75"></td> </tr>
             <tr>

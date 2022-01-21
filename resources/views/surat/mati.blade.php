@@ -16,14 +16,42 @@
             margin-right: -5%;
             margin-bottom: 0%;
         }
+        .border{
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+        .left-side{
+            border-left: 1px solid black;
+        }
+        .right-side{
+            border-right: 1px solid black;
+        }
+        .right-side-end{
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        /* .left-side-end{
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+        } */
+        .bottom{
+            border-bottom: 1px solid black
+        }
         .center{
             border-style: double;
 			border-width: 3px;
 			border-color: black;
         }
-        table td .text2 {
+        td.text2 {
             color: white;
+            border-left: 1px solid black;
 		}
+        td.text2-end{
+            color: white;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+        }
 
         td.white{
             color: white;
@@ -41,7 +69,7 @@
                 <tr>
                     <td  colspan="2" ><font size="12px"> Desa/Kelurahan</font></td>
                     <td><font size="12px">: NGLAMES</font></td>
-                    <td class="white"><font size="12px">%%%%%%%%%%%%%%%%%%%%%%</font></td>
+                    <td class="white"><font size="12px">%%%%%%%%%%%%%%%%%%%%%%%%%</font></td>
                     <td><font size="12px">Ket : </font></td>
                     <td><font size="12px">Lembar 1 Untuk Yang Bersangkutan</font></td>
                 </tr>
@@ -49,21 +77,21 @@
                     <td 1 colspan="2"  ><font size="12px"> Kecamatan</font></td>
                     <td><font size="12px">: MADIUN</font></td>
                     <td class="white"><font size="12px">-</font></td>
-                    <td><font size="12px" class="text2">Ket : </font></td>
+                    <td class="white"><font size="12px" >Ket : </font></td>
                     <td><font size="12px">Lembar 2 Untuk UPTD/Instansi Pelaksana</font></td>
                 </tr>
                 <tr>
                     <td  colspan="2" ><font size="12px"> Kabupaten/Kota</font></td>
                     <td><font size="12px">: MADIUN</font></td>
                     <td class="white"><font size="12px">-</font></td>
-                    <td><font size="12px" class="text2">Ket : </font></td>
+                    <td class="white"><font size="12px" >Ket : </font></td>
                     <td><font size="12px">Lembar 3 Untuk Desa/Kelurahan</font></td>
                 </tr>
                 <tr>
-                    <td  colspan="2" ><font size="12px" class="text2"> Kecamatan</font></td>
-                    <td ><font size="12px" class="text2">: MADIUN</font></td>
-                    <td ><font size="12px" class="text2">-</font></td>
-                    <td><font size="12px" class="text2">Ket : </font></td>
+                    <td class="white" colspan="2" ><font size="12px" > Kecamatan</font></td>
+                    <td class="white"><font size="12px" >: MADIUN</font></td>
+                    <td class="white"><font size="12px" >-</font></td>
+                    <td class="white"><font size="12px" >Ket : </font></td>
                     <td><font size="12px">Lembar 4 Untuk Kecamatan</font></td>
                 </tr>
                 <tr>
@@ -85,33 +113,33 @@
                     <td colspan="4"><font size="12px">: 098098098098</font></td>
                 </tr>
                 <tr>
-                    <td colspan="6"><font size="12px"><b>JENAZAH</b></font></td>
+                    <td class="border" colspan="6"><font size="12px"><b>JENAZAH</b></font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">1.  NIK</font></td>
-                    <td colspan="4"><font size="12px">: 3577032711990002</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">1.  NIK</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 3577032711990002</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">3.  Jenis Kelamin</font></td>
-                    <td  colspan="4"><font size="12px">: Laki-Laki</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3.  Jenis Kelamin</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Laki-Laki</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">4.  Tanggal Lahir / Umur</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Tanggal Lahir / Umur</font></td>
                     <td  colspan="2"><font size="12px">: 29/02/2000</font></td>
                     <td><font size="12px"> Umur :</font></td>
-                    <td><font size="12px"> 21</font></td>
+                    <td class="right-side"><font size="12px"> 21</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">5.  Tempat Lahir</font></td>
-                    <td colspan="4"><font size="12px">: Konoha</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">5.  Tempat Lahir</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: Konoha</font></td>
                     {{-- <td><font size="12px">Kode Prov </font></td>
                     <td><font size="12px">: 61</font></td>
                     <td><font size="12px">Kode Kab </font></td>
@@ -120,270 +148,270 @@
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">6.  Agama</font></td>
-                    <td  colspan="4"><font size="12px">: Atheis</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">6.  Agama</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Atheis</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">7.  Pekerjaan</font></td>
-                    <td  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">7.  Pekerjaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">8.  Alamat</font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">8.  Alamat</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">a.Desa/Kelurahan</font></td>
                     <td ><font size="12px">: NGLAMES</font></td>
                     <td ><font size="12px">c. Kab/Kota</font></td>
-                    <td ><font size="12px">: MADIUN</font></td>
+                    <td class="right-side" ><font size="12px">: MADIUN</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">b.KECAMATAN</font></td>
                     <td ><font size="12px">: MADIUN</font></td>
                     <td ><font size="12px">d. Provinsi</font></td>
-                    <td ><font size="12px">: JAWA TIMUR</font></td>
+                    <td class="right-side" ><font size="12px">: JAWA TIMUR</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">9. Anak ke-</font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">9. Anak ke-</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">10. Tanggal Kematian</font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">10. Tanggal Kematian</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">11. Pukul Kematian </font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">11. Pukul Kematian </font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">12. Sebab Kematian</font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">12. Sebab Kematian</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">13. Tempat Kematian</font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">13. Tempat Kematian</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">14. Yang Menerangkan </font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">14. Yang Menerangkan </font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
-                    <td colspan="6"><font size="12px"><b>AYAH</b></font></td>
-                </tr>
-                <tr>
-
-                    <td colspan="2" width="100"><font size="12px">1.  NIK</font></td>
-                    <td colspan="4"><font size="12px">: 3577032711990002</font></td>
+                    <td class="border" colspan="6"><font size="12px"><b>AYAH</b></font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">1.  NIK</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 3577032711990002</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
+
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                </tr>
+                <tr>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
                     <td  colspan="2"><font size="12px">: 29/02/2000</font></td>
                     <td><font size="12px"> Umur :</font></td>
-                    <td><font size="12px"> 21</font></td>
+                    <td class="right-side"><font size="12px"> 21</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
-                    <td  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">a.Desa/Kelurahan</font></td>
                     <td ><font size="12px">: NGLAMES</font></td>
                     <td ><font size="12px">c. Kab/Kota</font></td>
-                    <td ><font size="12px">: MADIUN</font></td>
+                    <td class="right-side" ><font size="12px">: MADIUN</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">b.KECAMATAN</font></td>
                     <td ><font size="12px">: MADIUN</font></td>
                     <td ><font size="12px">d. Provinsi</font></td>
-                    <td ><font size="12px">: JAWA TIMUR</font></td>
+                    <td class="right-side" ><font size="12px">: JAWA TIMUR</font></td>
                 </tr>
                 <tr>
-                    <td colspan="6"><font size="12px"><b>IBU</b></font></td>
-                </tr>
-                <tr>
-
-                    <td colspan="2" width="100"><font size="12px">1.  NIK</font></td>
-                    <td colspan="4"><font size="12px">: 3577032711990002</font></td>
+                    <td class="border" colspan="6"><font size="12px"><b>IBU</b></font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">1.  NIK</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 3577032711990002</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
+
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                </tr>
+                <tr>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
                     <td  colspan="2"><font size="12px">: 29/02/2000</font></td>
                     <td><font size="12px"> Umur :</font></td>
-                    <td><font size="12px"> 21</font></td>
+                    <td class="right-side"><font size="12px"> 21</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
-                    <td  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">a.Desa/Kelurahan</font></td>
                     <td ><font size="12px">: NGLAMES</font></td>
                     <td ><font size="12px">c. Kab/Kota</font></td>
-                    <td ><font size="12px">: MADIUN</font></td>
+                    <td class="right-side" ><font size="12px">: MADIUN</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">b.KECAMATAN</font></td>
                     <td ><font size="12px">: MADIUN</font></td>
                     <td ><font size="12px">d. Provinsi</font></td>
-                    <td ><font size="12px">: JAWA TIMUR</font></td>
+                    <td class="right-side" ><font size="12px">: JAWA TIMUR</font></td>
                 </tr>
                 <tr>
-                    <td colspan="6"><font size="12px"><b>PELAPOR</b></font></td>
-                </tr>
-                <tr>
-
-                    <td colspan="2" width="100"><font size="12px">1.  NIK</font></td>
-                    <td colspan="4"><font size="12px">: 3577032711990002</font></td>
+                    <td class="border" colspan="6"><font size="12px"><b>PELAPOR</b></font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">1.  NIK</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 3577032711990002</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
+
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                </tr>
+                <tr>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
                     <td  colspan="2"><font size="12px">: 29/02/2000</font></td>
                     <td><font size="12px"> Umur :</font></td>
-                    <td><font size="12px"> 21</font></td>
+                    <td class="right-side"><font size="12px"> 21</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
-                    <td  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">a.Desa/Kelurahan</font></td>
                     <td ><font size="12px">: NGLAMES</font></td>
                     <td ><font size="12px">c. Kab/Kota</font></td>
-                    <td ><font size="12px">: MADIUN</font></td>
+                    <td class="right-side" ><font size="12px">: MADIUN</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">b.KECAMATAN</font></td>
                     <td ><font size="12px">: MADIUN</font></td>
                     <td ><font size="12px">d. Provinsi</font></td>
-                    <td ><font size="12px">: JAWA TIMUR</font></td>
+                    <td class="right-side" ><font size="12px">: JAWA TIMUR</font></td>
                 </tr>
                 <tr>
-                    <td colspan="6"><font size="12px"><b>SAKSI 1</b></font></td>
-                </tr>
-                <tr>
-
-                    <td colspan="2" width="100"><font size="12px">1.  NIK</font></td>
-                    <td colspan="4"><font size="12px">: 3577032711990002</font></td>
+                    <td class="border" colspan="6"><font size="12px"><b>SAKSI 1</b></font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">1.  NIK</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 3577032711990002</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
+
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                </tr>
+                <tr>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
                     <td  colspan="2"><font size="12px">: 29/02/2000</font></td>
                     <td><font size="12px"> Umur :</font></td>
-                    <td><font size="12px"> 21</font></td>
+                    <td class="right-side"><font size="12px"> 21</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
-                    <td  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">4.  Alamat</font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Alamat</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">a.Desa/Kelurahan</font></td>
                     <td ><font size="12px">: NGLAMES</font></td>
                     <td ><font size="12px">c. Kab/Kota</font></td>
-                    <td ><font size="12px">: MADIUN</font></td>
+                    <td class="right-side" ><font size="12px">: MADIUN</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">b.KECAMATAN</font></td>
                     <td ><font size="12px">: MADIUN</font></td>
                     <td ><font size="12px">d. Provinsi</font></td>
-                    <td ><font size="12px">: JAWA TIMUR</font></td>
+                    <td class="right-side" ><font size="12px">: JAWA TIMUR</font></td>
                 </tr>
                 <tr>
-                    <td colspan="6"><font size="12px"><b>SAKSI 2</b></font></td>
-                </tr>
-                <tr>
-
-                    <td colspan="2" width="100"><font size="12px">1.  NIK</font></td>
-                    <td colspan="4"><font size="12px">: 3577032711990002</font></td>
+                    <td class="border" colspan="6"><font size="12px"><b>SAKSI 2</b></font></td>
                 </tr>
                 <tr>
 
-                    <td colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
-                    <td  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">1.  NIK</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: 3577032711990002</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
+
+                    <td class="left-side" colspan="2" width="100"><font size="12px">2.  Nama Lengkap</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Uchiha Itachi</font></td>
+                </tr>
+                <tr>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">3.  Tanggal Lahir / Umur</font></td>
                     <td  colspan="2"><font size="12px">: 29/02/2000</font></td>
                     <td><font size="12px"> Umur :</font></td>
-                    <td><font size="12px"> 21</font></td>
+                    <td class="right-side"><font size="12px"> 21</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
-                    <td  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">4.  Pekerjaan</font></td>
+                    <td class="right-side"  colspan="4"><font size="12px">: Memburu Jinchuriki</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
-                    <td  colspan="4"><font size="12px">: Desa Konohagakure</font></td>
+                    <td class="left-side" colspan="2" width="100"><font size="12px">5.  Alamat</font></td>
+                    <td class="right-side" colspan="4"><font size="12px">: Desa Konohagakure</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
+                    <td colspan="2" width="100" class="text2"><font size="12px">8.  Alamat</font></td>
                     <td ><font size="12px">a.Desa/Kelurahan</font></td>
                     <td ><font size="12px">: NGLAMES</font></td>
                     <td ><font size="12px">c. Kab/Kota</font></td>
-                    <td ><font size="12px">: MADIUN</font></td>
+                    <td class="right-side" ><font size="12px">: MADIUN</font></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="100" class="white"><font size="12px">8.  Alamat</font></td>
-                    <td ><font size="12px">b.KECAMATAN</font></td>
-                    <td ><font size="12px">: MADIUN</font></td>
-                    <td ><font size="12px">d. Provinsi</font></td>
-                    <td ><font size="12px">: JAWA TIMUR</font></td>
+                    <td colspan="2" width="100" class="text2-end"><font size="12px">8.  Alamat</font></td>
+                    <td class="bottom" ><font size="12px">b.KECAMATAN</font></td>
+                    <td class="bottom" ><font size="12px">: MADIUN</font></td>
+                    <td class="bottom" ><font size="12px">d. Provinsi</font></td>
+                    <td class="right-side-end" ><font size="12px">: JAWA TIMUR</font></td>
                 </tr>
 
 		    </table>
@@ -573,7 +601,7 @@
 		<br>
 		<table class="ttd" width="500">
 			<tr>
-				<td><font size="12px" class="text2"> - </font></td>
+				<td><font size="12px" class="white class="left-side""> - </font></td>
 				<td><font size="12px">Madiun, 29 Februari 1781</font></td>
 			</tr>
         	<tr>
