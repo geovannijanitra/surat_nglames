@@ -81,6 +81,7 @@
                                 <div class="form-group">
                                     <label for='jabatan'>Jabatan*</label>
                                     <select name="jabatan" class="form-control">
+                                        <option value="" disabled selected>Pilih Jabatan</select>
                                         <option value="Pejabat Kelurahan">Pejabat Kelurahan</option>
                                         <option value="Ketua RT atau RW">Ketua RT atau RW</option>
                                     </select>

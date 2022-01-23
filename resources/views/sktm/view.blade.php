@@ -1,11 +1,11 @@
 @extends('master.main')
-@section('judul','Data Surat Keterangan')
+@section('judul','Data SKTM')
 @section('content')
 {{-- header --}}
 <div class="row">
     <div class="col-sm-10">
-        <h4 class="page-title">Data Surat Keterangan</h4>
-        <p class="text-muted page-title-alt">Data Surat Keterangan dapat ditambahkan dan dilihat pada tabel di bawah ini</p>
+        <h4 class="page-title">Data SKTM</h4>
+        <p class="text-muted page-title-alt">Data SKTM dapat ditambahkan dan dilihat pada tabel di bawah ini</p>
     </div>
     {{-- <div class="col-sm-2">
         <br>
@@ -19,7 +19,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="card-box">
-            <form data-parsley-validate method="POST" action="{{url('/surat')}}" enctype="multipart/form-data" autocomplete="off">
+            <form data-parsley-validate method="POST" action="{{url('/sktm')}}" enctype="multipart/form-data" autocomplete="off">
                 @csrf
                 <div class="col-md-6">
                     <div class="form-group">
@@ -32,13 +32,13 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="usaha">Usaha</label>
-                        <input id="usaha" name="usaha" type="text" placeholder="Usaha" required
+                        <label for="namaAnak">Nama Anak</label>
+                        <input id="namaAnak" name="namaAnak" type="text" placeholder="Masukkan Nama Anak" required
                             class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="keperluan">Pinjaman di</label>
-                        <input id="keperluan" name="keperluan" type="text" placeholder="Instansi Pinjaman" required
+                        <label for="keperluan">Sekolah Anak</label>
+                        <input id="sekolah" name="sekolah" type="text" placeholder="Masukkan Nama Sekolah" required
                             class="form-control">
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                     <div  class="form-group">
                         <label for="noSurat">Jenis Surat</label>
                         <input id="jenis" name="jenis" type="text" placeholder="Nomor Surat" required
-                            class="form-control" disabled value="Surat Keterangan Domisili">
+                            class="form-control" disabled value="SKTM">
                     </div>
                     <div class="form-group">
                         <label for="jabatan" class="control-label">Pejabat Kelurahan (Yang bertanda tangan)</label>
@@ -88,8 +88,8 @@
                         <th>No Surat</th>
                         <th>Tanggal Surat</th>
                         <th>Pemohon</th>
-                        <th>Usaha</th>
-                        <th>Instansi Pinjaman</th>
+                        <th>Nama Anak</th>
+                        <th>Sekolah</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -99,10 +99,10 @@
                         <td>{{ $surat->noSurat }}</td>
                         <td>{{ $surat->tanggalSurat }}</td>
                         <td>{{ $surat->penduduk['nama'] }}</td>
-                        <td>{{ $surat->usaha }}</td>
-                        <td>{{ $surat->keperluan }}</td>
+                        <td>{{ $surat->namaAnak }}</td>
+                        <td>{{ $surat->sekolah }}</td>
                         <td>
-                            <a href="/surat/{{ $surat->idSurat }}/printsurat" class="btn btn-icon waves-effect waves-light btn-warning col-md-5"> <i class="md md-print"></i></a>
+                            <a href="/sktm/{{ $surat->idSurat }}/printSKTM" class="btn btn-icon waves-effect waves-light btn-warning col-md-5"> <i class="md md-print"></i></a>
                             <form action="/surat/{{ $surat->idSurat }}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf

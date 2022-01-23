@@ -23,6 +23,7 @@
                     <label for="jabatan">Jabatan*</label>
 
                         <select name="jabatan" class="form-control" value="{{$perangkat->jabatan}}">
+                            <option value="{{ $perangkat->jabatan }}"  selected></select>
                             <option value="Pejabat Kelurahan">Pejabat Kelurahan</option>
                             <option value="Ketua RT atau RW">Ketua RT atau RW</option>
                         </select>

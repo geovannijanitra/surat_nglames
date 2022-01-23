@@ -36,6 +36,7 @@
                         <label class="col-md-2 control-label">Status Hubungan</label>
                         <div class="col-md-10">
                             <select class="form-control" name="statushubungan" value="{{$penduduk->statushubungan}}">
+                                <option value="{{ $penduduk->statushubungan }}" selected>{{$penduduk->statushubungan}}</option>
                                 <option value="Kepala Keluarga">Kepala Keluarga</option>
                                 <option value="Suami">Suami</option>
                                 <option value="Istri">Istri</option>
@@ -66,6 +67,7 @@
                         <label class="col-md-2 control-label">Jenis Kelamin</label>
                         <div class="col-md-10">
                             <select name="kelamin" class="form-control" value="{{$penduduk->kelamin}}">
+                                <option value="{{ $penduduk->kelamin }}" selected>{{$penduduk->kelamin}}</option>
                                 <option value="Laki-laki">Laki-laki</option>
                                 <option value="Perempuan">Perempuan</option>
                             </select>
@@ -78,12 +80,13 @@
                         <label class="col-md-2 control-label">Agama</label>
                         <div class="col-md-10">
                             <select name="agama" class="form-control" value="{{$penduduk->agama}}">
-                                <option value="islam">Islam</option>
-                                <option value="protestan">Protestan</option>
-                                <option value="katolik">Katolik</option>
-                                <option value="hindu">Hindu</option>
-                                <option value="buddha">Buddha</option>
-                                <option value="konghuchu">Khonghuchu</option>
+                                <option value="{{ $penduduk->agama }}" selected>{{$penduduk->agama}}</option>
+                                <option value="Islam">Islam</option>
+                                <option value="Protestan">Protestan</option>
+                                <option value="Katolik">Katolik</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Buddha">Buddha</option>
+                                <option value="Konghuchu">Khonghuchu</option>
                             </select>
                         </div>
                     </div>
@@ -91,6 +94,7 @@
                         <label class="col-md-2 control-label">Status</label>
                         <div class="col-md-10">
                             <select name="status" class="form-control" value="{{$penduduk->status}}">
+                                <option value="{{ $penduduk->status }}" selected>{{$penduduk->status}}</option>
                                 <option value="Kawin">Kawin</option>
                                 <option value="Belum Kawin">Belum Kawin</option>
                                 <option value="Janda / Duda">Janda/Duda</option>
@@ -107,8 +111,9 @@
                         <label class="col-md-2 control-label">Warga Negara</label>
                         <div class="col-md-10">
                             <select class="form-control" name="kewarganegaraan" value="{{$penduduk->kewarganegaraan}}">
-                                <option value="WNI">Warga Negara Indonesia</option>
-                                <option value="WNA">Warga Negara Asing</option>
+                                <option value="{{ $penduduk->kewarganegaraan }}" selected>{{$penduduk->kewarganegaraan}}</option>
+                                    <option value="Warga Negara Indonesia">Warga Negara Indonesia</option>
+                                    <option value="Warga Negara Asing">Warga Negara Asing</option>
                             </select>
                         </div>
                     </div>
@@ -116,6 +121,7 @@
                         <label class="col-md-2 control-label">Pendidikan Terakhir</label>
                         <div class="col-md-10">
                             <select class="form-control" name="pendidikan" value="{{$penduduk->pendidikan}}">
+                                <option value="{{ $penduduk->pendidikan }}" selected>{{$penduduk->pendidikan}}</option>
                                 <option value="TIDAK / BELUM SEKOLAH">TIDAK / BELUM SEKOLAH</option>
                                 <option value="BELUM TAMAT SD / SEDERAJAT">BELUM TAMAT SD / SEDERAJAT </option>
                                 <option value="TAMAT SD / SEDERAJAT">TAMAT SD / SEDERAJAT</option>

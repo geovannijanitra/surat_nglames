@@ -36,8 +36,8 @@
                         <font size="18px">PEMERINTAH KABUPATEN MADIUN </font><br>
                         <font size="18px"><b>KECAMATAN MADIUN</b></font><br>
                         <font size="26px"><b>KELURANGAN NGLAMES</b></font><br>
-                        <font size="16px"><b>JL. Lapangan No. 17 Telepon (0351) 468010</b></font><br>
-                        <font size="18px">NGLAMES   63161</font><br><br>
+                        <font size="16px">JL. Lapangan No. 17 Telepon (0351) 468010</font><br>
+                        <font size="18px"><b>NGLAMES   63161</b></font><br><br>
                 </td>
             </table>
         </div>
@@ -66,7 +66,7 @@
 			<tr>
 				<td>
                     <center>
-                        <font size="16px">Nomor : 331/ ... /402.409.01/</font>
+                        <font size="16px">Nomor : {{ $noSurat }}</font>
                     </center>
                 </td>
 			</tr>
@@ -80,11 +80,11 @@
 		<table width="350">
 			<tr>
 				<td width="150"><font size="16px">a. &emsp; Nama</font></td>
-				<td><font size="16px">: &emsp;Pak Supriyono</font></td>
+				<td><font size="16px">: &emsp;{{ $namaPerangkat }}</font></td>
 			</tr>
             <tr>
-				<td width="150"><font size="16px">b. &emsp; Tanggal</font></td>
-				<td><font size="16px">: &emsp;bbb</font></td>
+				<td width="150"><font size="16px">b. &emsp; Jabatan</font></td>
+				<td><font size="16px">: &emsp;{{ $jabatanPerangkat }}</font></td>
 			</tr>
 		</table>
 		<br>
@@ -98,38 +98,38 @@
 		<table width="350">
 			<tr>
 				<td width="150"><font size="16px">a. &emsp; Nama</font></td>
-				<td><font size="16px">: &emsp;Geovanni Azam Janitra</font></td>
+				<td><font size="16px">: &emsp;{{ $nama }}</font></td>
 			</tr>
             <tr>
 				<td width="150"><font size="16px">b. &emsp; NIK</font></td>
-				<td><font size="16px">: &emsp;3577032711990002</font></td>
+				<td><font size="16px">: &emsp;{{ $nik }}</font></td>
 			</tr>
             <tr>
 				<td width="150"><font size="16px">c. &emsp; Tempat, Tanggal Lahir</font></td>
-				<td><font size="16px">: &emsp;Madiun, 27 November 1999</font></td>
+				<td><font size="16px">: &emsp;{{ $tempatLahir }}, {{ $tanggalLahir }}</font></td>
             <tr>
 				<td width="150"><font size="16px">d. &emsp; Umur</font></td>
-				<td><font size="16px">: &emsp;22</font></td>
+				<td><font size="16px">: &emsp;{{ $umurPenduduk }}</font></td>
 			</tr>
             <tr>
 				<td width="150"><font size="16px">e. &emsp; Jenis Kelamin</font></td>
-				<td><font size="16px">: &emsp;Laki-laki</font></td>
+				<td><font size="16px">: &emsp;{{ $kelamin }}</font></td>
 			</tr>
             <tr>
 				<td width="150"><font size="16px">f. &emsp; Agama</font></td>
-				<td><font size="16px">: &emsp;Islam</font></td>
+				<td><font size="16px">: &emsp;{{ $agama }}</font></td>
 			</tr>
             <tr>
 				<td width="150"><font size="16px">g. &emsp; Kebangsaan</font></td>
-				<td><font size="16px">: &emsp;Indonesia</font></td>
+				<td><font size="16px">: &emsp;{{ $kewarganegaraan }}</font></td>
 			</tr>
             <tr>
 				<td width="150"><font size="16px">h. &emsp; Pekerjaan</font></td>
-				<td><font size="16px">: &emsp;Creative Director</font></td>
+				<td><font size="16px">: &emsp;{{ $pekerjaan }}</font></td>
 			</tr>
             <tr>
 				<td width="150"><font size="16px">i. &emsp; Alamat</font></td>
-				<td><font size="16px">: &emsp;Manisrejo, Madiun</font></td>
+				<td><font size="16px">: &emsp;{{ $alamat }}</font></td>
 			</tr>
 		</table><br>
 		<table width="400">
@@ -162,16 +162,16 @@
 		<table class="ttd" width="400">
 			<tr>
 				<td><font size="16px" class="text2"> - </font></td>
-				<td><font size="16px">Madiun, 29 Februari 1781</font></td>
+				<td><font size="16px">Madiun, {{ $tanggalSurat }}</font></td>
 			</tr>
         	<tr>
     			<th><font size="16px">Yang Berhak Tanda Tangan</font></th>
-    			<th><font size="16px">LURAH NGLAMES</font></th>
+    			<th><font size="16px">{{ $jabatanPerangkat }}</font></th>
   			</tr>
             <tr> <td colspan="2" height="10"><img src="transp.gif" alt="" width="1" height="75"></td> </tr>
             <tr>
-    			<td><font size="16px">Alfreds Futterkiste</font></td>
-    			<td><font size="16px">Maria Anders</font></td>
+    			<td><font size="16px">{{ $nama }}</font></td>
+    			<td><font size="16px">{{ $namaPerangkat }}</font></td>
   			</tr>
 
 	    </table>

@@ -6,12 +6,13 @@ use App\Models\Penduduk;
 use App\Models\KK;
 use App\Models\Perangkat;
 use App\Models\Surat;
+use App\Models\Pengikut;
 use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Facades\DB;
 use DateTime;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Date;
 
-class SuratController extends Controller
+class PindahController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,10 +21,11 @@ class SuratController extends Controller
      */
     public function index()
     {
-        $surat = Surat::where('jenisSurat','Domisili')->get();
+        $surat = Surat::where('jenisSurat', 'pindah')->get();
+
         $penduduk = Penduduk::all();
         $perangkat = Perangkat::all();
-        return view('surat.view', compact ('surat', 'penduduk', 'perangkat'))->with('success', 'Data berhasil ditambahkan');
+        return view('pindah.view', compact('surat', 'penduduk', 'perangkat'))->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
@@ -32,10 +34,10 @@ class SuratController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {   $perangkat = Perangkat::all();
         $surat = Surat::all();
         $penduduk = Penduduk::all();
-        return view('surat.view', compact('surat', 'penduduk'));
+        return view('pindah.create', compact('surat', 'penduduk', 'perangkat'));
     }
 
     /**
@@ -46,19 +48,15 @@ class SuratController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         $detailWarga = Penduduk::where('nik', $request->nik)->first();
         $keluarga = KK::where('noKk', $detailWarga->no_kk)->get();
-        // $lahir = date_create($detailWarga->tanggal_lahir);
-        // $now = date_create();
-        // $diff = date_diff($lahir, $now);
-        // echo $detailWarga->tanggalLahir;
         $lahir = new DateTime($detailWarga['tanggalLahir']);
         $now = \Carbon\Carbon::now('Asia/Jakarta');
         $interval = $lahir->diff($now);
         $umur = $interval->format('%y');
         $bulan = $now->format('F');
         $tgl = $now->format('d');
-        // $jam = $now->format('H:i:s');
 
         switch ($bulan) {
             case "January":
@@ -101,63 +99,81 @@ class SuratController extends Controller
                 echo "Translate to Indonesia secara manual";
         }
         $tahun = $now->format('Y');
-        $tglSurat = $tgl.' '. $bln.' '. $tahun;
+        $tglSurat = $tgl . ' ' . $bln . ' ' . $tahun;
 
 
-        // echo $jam;
-        // dd($request);
 
-        Surat::create([
+        $surat = new Surat([
             'nik' => $detailWarga->nik,
-            'noSurat' => '470/'.$request->noSurat.'/402.409.01/'.$tahun ,
-            'jenisSurat' => 'Domisili',
+            'pindah1'=>$request->pindah1,
+            'noSurat' => '475/' . $request->noSurat . '/402.409.01/' . $tahun,
+            'jenisSurat' => 'Pindah',
             'umurPenduduk' => $umur,
             'usaha' => $request->usaha,
             'tanggalSurat' => $tglSurat,
             'keperluan' => $request->keperluan,
             'tandatangan' => $request->tandatangan,
-
+            'desaKe' => $request->desaKe,
+            'kecamatanKe' => $request->kecamatanKe,
+            'kotaKe' => $request->kotaKe,
+            'alasan' => $request->alasan,
+            'tanggalPindah' => $request->tanggalPindah,
+            'propinsiKe' => $request->propinsiKe,
         ]);
 
-        return redirect('/surat')->with(['success' => 'Data Surat Berhasil Ditambahkan!']);
+        $surat->save();
 
+        $nomer = $request->nomer;
+        $nama = $request->nama;
+        $kelamin = $request->kelamin;
+        $umurpengikut = $request->umurpengikut;
+        $status = $request->status;
+        $pendidikan = $request->pendidikan;
+        $nikpengikut = $request->nikpengikut;
+        $ket = $request->ket;
+
+        for ($i = 0; $i < count($nomer); $i++) {
+            $datasave = [
+                'surat_id'      => $surat->idSurat,
+                'nomer'            => $nomer[$i],
+                'nama'          => $nama[$i],
+                'kelamin'       => $kelamin[$i],
+                'umurpengikut'  => $umurpengikut[$i],
+                'status'        => $status[$i],
+                'pendidikan'    => $pendidikan[$i],
+                'nikpengikut'   => $nikpengikut[$i],
+                'ket'           => $ket[$i],
+            ];
+            DB::table('pengikut')->insert($datasave);
+        }
+
+        return redirect('/pindah')->with(['success' => 'Data Surat Berhasil Ditambahkan!']);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Surat  $surat
+     * @param  \App\Models\SKCK  $sKCK
      * @return \Illuminate\Http\Response
      */
-    public function show(Surat $surat)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Surat  $surat
+     * @param  \App\Models\SKCK  $sKCK
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        $surat = Surat::find($id);
-        $penduduk = Penduduk::all();
-        $perangkat = Perangkat::all();
-        $kk = KK::all();
-        return view('surat.update', compact('surat', 'penduduk', 'perangkat', 'kk'));
-    }
-
-    public function printsurat($id)
+    public function printPindah($id)
     {
         $surat = Surat::find($id);
         $perangkat = Perangkat::where('idPerangkat', $surat->tandatangan)->first();
         $penduduk = Penduduk::where('nik', $surat->nik)->first();
         $kk = KK::where('noKk', $penduduk->no_kk)->first();
         $tanggalLahir = date("d-m-Y", strtotime($penduduk->tanggalLahir));
+        $tanggalPindah = date("d-m-Y", strtotime($surat->tanggalPindah));
+        $pengikut = Pengikut::where('surat_id', $surat->idSurat)->get();
 
-        $pdf = PDF::loadView('surat.template', [
+        $pdf = PDF::loadView('surat.pindah', [
             'noSurat' => $surat->noSurat,
             'tanggalSurat' => $surat->tanggalSurat,
             'keperluan' => $surat->keperluan,
@@ -166,8 +182,18 @@ class SuratController extends Controller
             'jabatanPerangkat' => $perangkat->detail,
             'alamat' => $kk->alamat,
             'RT' => $kk->RT,
-            'RW'=> $kk->RW,
-            'usaha'=> $surat->usaha,
+            'RW' => $kk->RW,
+            'usaha' => $surat->usaha,
+            'alasan' => $surat->alasan,
+            'desaKe' => $surat->desaKe,
+            'kecamatanKe' => $surat->kecamatanKe,
+            'kotaKe' => $surat->kotaKe,
+            'propinsiKe' => $surat->propinsiKe,
+            'tanggalPindah' => $tanggalPindah,
+            'status'=> $penduduk->status,
+            'pendidikan'=> $penduduk->pendidikan,
+            'pengikut' => $pengikut,
+
 
             'nama' => $penduduk->nama,
             'nik' => $penduduk->nik,
@@ -181,22 +207,18 @@ class SuratController extends Controller
         ]);
         return $pdf->stream();
     }
-
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Surat  $surat
+     * @param  \App\Models\SKCK  $sKCK
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-    }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Surat  $surat
+     * @param  \App\Models\SKCK  $sKCK
      * @return \Illuminate\Http\Response
      */
     public function destroy(Surat $surat)
@@ -204,5 +226,4 @@ class SuratController extends Controller
         Surat::destroy($surat->idSurat);
         return redirect()->back()->with('error', 'Data berhasil dihapus');
     }
-
 }

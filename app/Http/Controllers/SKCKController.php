@@ -1,17 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Penduduk;
-use App\Models\KK;
-use App\Models\Perangkat;
 use App\Models\Surat;
-use Barryvdh\DomPDF\Facade as PDF;
+use App\Models\KK;
+use App\Models\Penduduk;
 use DateTime;
+use App\Models\Perangkat;
+use App\Models\SKCK;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Date;
+use Barryvdh\DomPDF\Facade as PDF;
 
-class SuratController extends Controller
+class SKCKController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,10 +19,11 @@ class SuratController extends Controller
      */
     public function index()
     {
-        $surat = Surat::where('jenisSurat','Domisili')->get();
+        $surat = Surat::where('jenisSurat', 'SKCK')->get();
+
         $penduduk = Penduduk::all();
         $perangkat = Perangkat::all();
-        return view('surat.view', compact ('surat', 'penduduk', 'perangkat'))->with('success', 'Data berhasil ditambahkan');
+        return view('skck.view', compact('surat', 'penduduk', 'perangkat'))->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
@@ -35,7 +35,7 @@ class SuratController extends Controller
     {
         $surat = Surat::all();
         $penduduk = Penduduk::all();
-        return view('surat.view', compact('surat', 'penduduk'));
+        return view('skck.view', compact('surat', 'penduduk'));
     }
 
     /**
@@ -48,10 +48,6 @@ class SuratController extends Controller
     {
         $detailWarga = Penduduk::where('nik', $request->nik)->first();
         $keluarga = KK::where('noKk', $detailWarga->no_kk)->get();
-        // $lahir = date_create($detailWarga->tanggal_lahir);
-        // $now = date_create();
-        // $diff = date_diff($lahir, $now);
-        // echo $detailWarga->tanggalLahir;
         $lahir = new DateTime($detailWarga['tanggalLahir']);
         $now = \Carbon\Carbon::now('Asia/Jakarta');
         $interval = $lahir->diff($now);
@@ -101,7 +97,7 @@ class SuratController extends Controller
                 echo "Translate to Indonesia secara manual";
         }
         $tahun = $now->format('Y');
-        $tglSurat = $tgl.' '. $bln.' '. $tahun;
+        $tglSurat = $tgl . ' ' . $bln . ' ' . $tahun;
 
 
         // echo $jam;
@@ -109,8 +105,8 @@ class SuratController extends Controller
 
         Surat::create([
             'nik' => $detailWarga->nik,
-            'noSurat' => '470/'.$request->noSurat.'/402.409.01/'.$tahun ,
-            'jenisSurat' => 'Domisili',
+            'noSurat' => '331/' . $request->noSurat . '/402.409.01/' . $tahun,
+            'jenisSurat' => 'SKCK',
             'umurPenduduk' => $umur,
             'usaha' => $request->usaha,
             'tanggalSurat' => $tglSurat,
@@ -119,25 +115,21 @@ class SuratController extends Controller
 
         ]);
 
-        return redirect('/surat')->with(['success' => 'Data Surat Berhasil Ditambahkan!']);
+        return redirect('/skck')->with(['success' => 'Data Surat Berhasil Ditambahkan!']);
 
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Surat  $surat
+     * @param  \App\Models\SKCK  $sKCK
      * @return \Illuminate\Http\Response
      */
-    public function show(Surat $surat)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Surat  $surat
+     * @param  \App\Models\SKCK  $sKCK
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -147,9 +139,10 @@ class SuratController extends Controller
         $perangkat = Perangkat::all();
         $kk = KK::all();
         return view('surat.update', compact('surat', 'penduduk', 'perangkat', 'kk'));
+
     }
 
-    public function printsurat($id)
+    public function printSKCK($id)
     {
         $surat = Surat::find($id);
         $perangkat = Perangkat::where('idPerangkat', $surat->tandatangan)->first();
@@ -157,7 +150,7 @@ class SuratController extends Controller
         $kk = KK::where('noKk', $penduduk->no_kk)->first();
         $tanggalLahir = date("d-m-Y", strtotime($penduduk->tanggalLahir));
 
-        $pdf = PDF::loadView('surat.template', [
+        $pdf = PDF::loadView('surat.skck', [
             'noSurat' => $surat->noSurat,
             'tanggalSurat' => $surat->tanggalSurat,
             'keperluan' => $surat->keperluan,
@@ -166,8 +159,8 @@ class SuratController extends Controller
             'jabatanPerangkat' => $perangkat->detail,
             'alamat' => $kk->alamat,
             'RT' => $kk->RT,
-            'RW'=> $kk->RW,
-            'usaha'=> $surat->usaha,
+            'RW' => $kk->RW,
+            'usaha' => $surat->usaha,
 
             'nama' => $penduduk->nama,
             'nik' => $penduduk->nik,
@@ -181,22 +174,18 @@ class SuratController extends Controller
         ]);
         return $pdf->stream();
     }
-
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Surat  $surat
+     * @param  \App\Models\SKCK  $sKCK
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-    }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Surat  $surat
+     * @param  \App\Models\SKCK  $sKCK
      * @return \Illuminate\Http\Response
      */
     public function destroy(Surat $surat)
@@ -204,5 +193,4 @@ class SuratController extends Controller
         Surat::destroy($surat->idSurat);
         return redirect()->back()->with('error', 'Data berhasil dihapus');
     }
-
 }

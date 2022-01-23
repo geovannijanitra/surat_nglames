@@ -13,8 +13,34 @@ class Surat extends Model
         'nik',
         'noSurat',
         'jenisSurat',
-        'keperluan',
-        'tanggalSurat',
         'umurPenduduk',
+        'tanggalSurat',
+        'keperluan',
+        'tandatangan',
+        'usaha',
+        'namaAnak',
+        'sekolah',
+        'desaKe',
+        'kecamatanKe',
+        'kotaKe',
+        'alasan',
+        'tanggalPindah',
+        'propinsiKe',
     ];
+
+    public function pengikut()
+    {
+        return $this->hasMany(Pengikut::class, 'surat_id');
+    }
+
+
+    public function penduduk()
+    {
+        return $this->belongsTo(Penduduk::class, 'nik');
+    }
+
+    public function perangkat()
+    {
+        return $this->belongsTo(Perangkat::class, 'tandatangan');
+    }
 }

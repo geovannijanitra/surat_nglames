@@ -43,6 +43,7 @@ class PendudukController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+
         Penduduk::create($data);
         return back()->with('success', 'Data berhasil ditambahkan');
     }

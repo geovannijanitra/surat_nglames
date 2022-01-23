@@ -8,22 +8,17 @@ use App\Models\Perangkat;
 use App\Models\Surat;
 use Barryvdh\DomPDF\Facade as PDF;
 use DateTime;
+use App\Models\SKTM;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Date;
 
-class SuratController extends Controller
+class SKTMController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $surat = Surat::where('jenisSurat','Domisili')->get();
+        $surat = Surat::where('jenisSurat', 'SKTM')->get();
         $penduduk = Penduduk::all();
         $perangkat = Perangkat::all();
-        return view('surat.view', compact ('surat', 'penduduk', 'perangkat'))->with('success', 'Data berhasil ditambahkan');
+        return view('sktm.view', compact('surat', 'penduduk', 'perangkat'))->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
@@ -35,7 +30,7 @@ class SuratController extends Controller
     {
         $surat = Surat::all();
         $penduduk = Penduduk::all();
-        return view('surat.view', compact('surat', 'penduduk'));
+        return view('sktm.view', compact('surat', 'penduduk'));
     }
 
     /**
@@ -48,10 +43,6 @@ class SuratController extends Controller
     {
         $detailWarga = Penduduk::where('nik', $request->nik)->first();
         $keluarga = KK::where('noKk', $detailWarga->no_kk)->get();
-        // $lahir = date_create($detailWarga->tanggal_lahir);
-        // $now = date_create();
-        // $diff = date_diff($lahir, $now);
-        // echo $detailWarga->tanggalLahir;
         $lahir = new DateTime($detailWarga['tanggalLahir']);
         $now = \Carbon\Carbon::now('Asia/Jakarta');
         $interval = $lahir->diff($now);
@@ -101,7 +92,7 @@ class SuratController extends Controller
                 echo "Translate to Indonesia secara manual";
         }
         $tahun = $now->format('Y');
-        $tglSurat = $tgl.' '. $bln.' '. $tahun;
+        $tglSurat = $tgl . ' ' . $bln . ' ' . $tahun;
 
 
         // echo $jam;
@@ -109,18 +100,18 @@ class SuratController extends Controller
 
         Surat::create([
             'nik' => $detailWarga->nik,
-            'noSurat' => '470/'.$request->noSurat.'/402.409.01/'.$tahun ,
-            'jenisSurat' => 'Domisili',
+            'noSurat' => '470/' . $request->noSurat . '/402.409.01/' . $tahun,
+            'jenisSurat' => 'SKTM',
             'umurPenduduk' => $umur,
             'usaha' => $request->usaha,
             'tanggalSurat' => $tglSurat,
             'keperluan' => $request->keperluan,
             'tandatangan' => $request->tandatangan,
-
+            'namaAnak' =>$request->namaAnak,
+            'sekolah' =>$request->sekolah
         ]);
 
-        return redirect('/surat')->with(['success' => 'Data Surat Berhasil Ditambahkan!']);
-
+        return redirect('/sktm')->with(['success' => 'Data Surat Berhasil Ditambahkan!']);
     }
 
     /**
@@ -140,16 +131,8 @@ class SuratController extends Controller
      * @param  \App\Models\Surat  $surat
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        $surat = Surat::find($id);
-        $penduduk = Penduduk::all();
-        $perangkat = Perangkat::all();
-        $kk = KK::all();
-        return view('surat.update', compact('surat', 'penduduk', 'perangkat', 'kk'));
-    }
 
-    public function printsurat($id)
+    public function printSKTM($id)
     {
         $surat = Surat::find($id);
         $perangkat = Perangkat::where('idPerangkat', $surat->tandatangan)->first();
@@ -157,7 +140,7 @@ class SuratController extends Controller
         $kk = KK::where('noKk', $penduduk->no_kk)->first();
         $tanggalLahir = date("d-m-Y", strtotime($penduduk->tanggalLahir));
 
-        $pdf = PDF::loadView('surat.template', [
+        $pdf = PDF::loadView('surat.sktm', [
             'noSurat' => $surat->noSurat,
             'tanggalSurat' => $surat->tanggalSurat,
             'keperluan' => $surat->keperluan,
@@ -166,8 +149,10 @@ class SuratController extends Controller
             'jabatanPerangkat' => $perangkat->detail,
             'alamat' => $kk->alamat,
             'RT' => $kk->RT,
-            'RW'=> $kk->RW,
-            'usaha'=> $surat->usaha,
+            'RW' => $kk->RW,
+            'usaha' => $surat->usaha,
+            'namaAnak' =>$surat->namaAnak,
+            'sekolah' =>$surat->sekolah,
 
             'nama' => $penduduk->nama,
             'nik' => $penduduk->nik,
@@ -204,5 +189,4 @@ class SuratController extends Controller
         Surat::destroy($surat->idSurat);
         return redirect()->back()->with('error', 'Data berhasil dihapus');
     }
-
 }

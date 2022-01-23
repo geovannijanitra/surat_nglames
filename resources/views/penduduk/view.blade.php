@@ -103,7 +103,8 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label">Status Hubungan</label>
                             <div class="col-md-10">
-                                <select class="form-control" name="statushubungan">
+                                <select required class="form-control" name="statushubungan">
+                                    <option value="" disabled selected> Pilih Status Hubungan dalam Keluarga </option>
                                     <option value="Kepala Keluarga">Kepala Keluarga</option>
                                     <option value="Suami">Suami</option>
                                     <option value="Istri">Istri</option>
@@ -133,10 +134,10 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label">Jenis Kelamin</label>
                             <div class="col-md-10">
-                                <select name="kelamin" class="form-control">
+                                <select required name="kelamin" class="form-control">
                                     <option value="Laki-laki">Laki-laki</option>
                                     <option value="Perempuan">Perempuan</option>
-                                </select>
+                                <option value="" disabled selected>Pilih Jenis Kelamin</select>
                             </div>
                         </div>
                     </div>
@@ -145,24 +146,24 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label">Agama</label>
                             <div class="col-md-10">
-                                <select name="agama" class="form-control">
-                                    <option value="islam">Islam</option>
-                                    <option value="protestan">Protestan</option>
-                                    <option value="katolik">Katolik</option>
-                                    <option value="hindu">Hindu</option>
-                                    <option value="buddha">Buddha</option>
-                                    <option value="konghuchu">Khonghuchu</option>
-                                </select>
+                                <select required name="agama" class="form-control">
+                                    <option value="Islam">Islam</option>
+                                    <option value="Protestan">Protestan</option>
+                                    <option value="Katolik">Katolik</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Buddha">Buddha</option>
+                                    <option value="Konghuchu">Khonghuchu</option>
+                                <option value="" disabled selected>Pilih Agama</select>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label">Status</label>
                             <div class="col-md-10">
-                                <select name="status" class="form-control">
+                                <select required name="status" class="form-control">
                                     <option value="Kawin">Kawin</option>
                                     <option value="Belum Kawin">Belum Kawin</option>
                                     <option value="Janda / Duda">Janda/Duda</option>
-                                </select>
+                                <option value="" disabled selected>Pilih Status Perkawinan</select>
                             </div>
                         </div>
                         <div class="form-group">
@@ -174,26 +175,27 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label">Warga Negara</label>
                             <div class="col-md-10">
-                                <select class="form-control" name="kewarganegaraan">
-                                    <option value="WNI">Warga Negara Indonesia</option>
-                                    <option value="WNA">Warga Negara Asing</option>
-                                </select>
+                                <select required class="form-control" name="kewarganegaraan">
+                                    <option value="Warga Negara Indonesia">Warga Negara Indonesia</option>
+                                    <option value="Warga Negara Asing">Warga Negara Asing</option>
+                                <option value="" disabled selected>Pilih Kewarganegaraan</select>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label">Pendidikan Terakhir</label>
                             <div class="col-md-10">
-                                <select class="form-control" name="pendidikan">
-                                    <option value="belum sekolah">TIDAK / BELUM SEKOLAH</option>
-                                    <option value="belum tamat SD">BELUM TAMAT SD / SEDERAJAT </option>
-                                    <option value="tamat SD">TAMAT SD / SEDERAJAT</option>
-                                    <option value="SMP">SLTP / SEDERAJAT</option>
-                                    <option value="SMA">SLTA / SEDERAJAT</option>
-                                    <option value="D1/D2">DIPLOMA I / II</option>
-                                    <option value="D3">AKADEMI / DIPLOMA III / S. MUDA</option>
-                                    <option value="D4/S1">DIPLOMA IV/ STRATA I</option>
-                                    <option value="S2">STRATA II</option>
-                                    <option value="S3">STRATA III</option>
+                                <select required class="form-control" name="pendidikan">
+                                    <option value="TIDAK / BELUM SEKOLAH">TIDAK / BELUM SEKOLAH</option>
+                                    <option value="BELUM TAMAT SD / SEDERAJAT">BELUM TAMAT SD / SEDERAJAT </option>
+                                    <option value="TAMAT SD / SEDERAJAT">TAMAT SD / SEDERAJAT</option>
+                                    <option value="SLTP / SEDERAJAT">SLTP / SEDERAJAT</option>
+                                    <option value="SLTA / SEDERAJAT">SLTA / SEDERAJAT</option>
+                                    <option value="DIPLOMA I / II">DIPLOMA I / II</option>
+                                    <option value="AKADEMI / DIPLOMA III / S. MUDA">AKADEMI / DIPLOMA III / S. MUDA</option>
+                                    <option value="DIPLOMA IV/ STRATA I">DIPLOMA IV/ STRATA I</option>
+                                    <option value="STRATA II">STRATA II</option>
+                                    <option value="STRATA III">STRATA III</option>
+                                    <option value="" disabled selected>Pilih Pendidikan Terakhir</select>
                                 </select>
                             </div>
                         </div>

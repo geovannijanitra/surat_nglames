@@ -9,22 +9,21 @@ class Perangkat extends Model
 {
     protected $table = 'perangkat';
     protected $primaryKey = 'idPerangkat';
-    protected $fillable = [
+    protected $fillable =
+    [
         'nama',
         'tanggalLahir',
-        // 'pekerjaan',
         'jabatan',
         'detail',
         'alamat',
         // 'kelurahan',
         // 'kecamatan',
         // 'kota',
-        // 'provinsi',
+        // 'provinsi'
     ];
-
-    // public function surat()
-    // {
-    //     return $this->hasMany(Surat::class, idPerangkat);
-    // }
+    public function surat()
+    {
+        return $this->hasMany(Surat::class, 'tandatangan');
+    }
 }
 

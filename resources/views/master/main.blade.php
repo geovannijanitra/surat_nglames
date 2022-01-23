@@ -216,7 +216,30 @@
         TableManageButtons.init();
     </script>
 
+<script>
+        $('thead').on('click','.addRow2', function(){
+             var tr =  "<tr>"+
 
+                "<td><input name='nomer[]' id='nomer[]' type='string' class='form-control' placeholder='No'></td>"+
+                "<td><input name='nama[]' id='nama[]' type='text' class='form-control' placeholder='Nama'></td>"+
+                "<td><input name='kelamin[]' id='kelamin[]' type='text' class='form-control' placeholder='Jenis Kelamin'></td>"+
+                "<td><input name='umurpengikut[]' id='umurpengikut[]' type='text' class='form-control' placeholder='Umur'></td>"+
+                "<td><input name='status[]' id='status[]' type='text' class='form-control' placeholder='Status Perkawinan'></td>"+
+                "<td><input name='pendidikan[]' id='pendidikan[]' type='text' class='form-control' placeholder='Pendidikan Terakhir'></td>"+
+                "<td><input name='nikpengikut[]' id='nikpengikut[]' type='string' class='form-control' placeholder='NIK'></td>"+
+                "<td><input name='ket[]' id='ket[]' type='text' class='form-control' placeholder='Keterangan'></td>"+
+
+                // "<td><input name='progres[]' id='progres[]' type='number' class='form-control' placeholder='%'></td>"+
+                // "<td><input type='text' id='tahapan[]' name='tahapan[]' class='form-control' placeholder='tahapan'></td>"+
+               " <th><a href='javascript:void(0)' class='btn btn-danger deleteRow2'><i class='fa fa-minus'></i></th>"+
+            "</tr>"
+            $('tbody').append(tr);
+         });
+
+         $('tbody').on('click', '.deleteRow2' , function(){
+             $(this).parent().parent().remove();
+         });
+    </script>
 
 
 </body>

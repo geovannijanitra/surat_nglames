@@ -58,7 +58,7 @@
 
 
                     <li class="has-submenu">
-                        <a href="/kk"><i class="md md-my-library-books"></i>Data Keluarga</a>
+                        <a href="/kk"><i class="md md-location-city"></i>Data Keluarga</a>
 
                     </li>
 
@@ -70,11 +70,10 @@
                                     <li>
                                         <span>Surat Keterangan</span>
                                     </li>
-                                    <li><a href="/surat">Surat Keterangan</a></li>
-                                    <li><a href="components-widgets.html">Belum Kawin</a></li>
-                                    <li><a href="components-nestable-list.html">Penghasilan</a></li>
-                                    <li><a href="components-range-sliders.html">Usaha</a></li>
-                                    <li><a href="components-masonry.html">Tidak Mampu</a></li>
+                                    <li><a href="/surat">Domisili (Usaha)</a></li>
+                                    <li><a href="/skck">SKCK</a></li>
+                                    <li><a href="/sktm">SKTM</a></li>
+                                    <li><a href="/pindah">Pindah</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -82,18 +81,8 @@
                                     <li>
                                         <span>Surat Akta</span>
                                     </li>
-                                    <li><a href="form-elements.html">Kelahiran</a></li>
-                                    <li><a href="form-advanced.html">Kematian</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <ul>
-                                    <li>
-                                        <span>Surat Lain-lain</span>
-                                    </li>
-                                    <li><a href="form-mask.html">Izin Keramaian</a></li>
-                                    <li><a href="form-summernote.html">Kehilangan</a></li>
+                                    <li><a href="/kelahiran">Kelahiran</a></li>
+                                    <li><a href="/kematian">Kematian</a></li>
                                 </ul>
                             </li>
 
@@ -102,6 +91,16 @@
                     </li>
 
                     <li class="has-submenu">
+                        <a href="#"><i class="md md-assessment"></i>Rekapitulasi</a>
+                        <ul class="submenu megamenu">
+                            <li>
+                                <ul>
+                                    <li><a href="/rekappenduduk">Data Penduduk</a></li>
+                                    <li><a href="/rekapsurat">Data Surat</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
                     </li>
                 </ul>
                 <!-- End navigation menu        -->
