@@ -75,6 +75,7 @@ class PerangkatController extends Controller
     public function update(Request $request, $id)
     {
         Perangkat::where('idPerangkat', $id)->update([
+            'nikPerangkat'=>$request->nikPerangkat,
             'nama'=> $request->nama,
             'tanggalLahir'=> $request->tanggalLahir,
             // 'pekerjaan'=> $request->pekerjaan,

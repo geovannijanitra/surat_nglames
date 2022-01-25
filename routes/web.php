@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KematianController;
 use App\Http\Controllers\KkController;
 use App\Http\Controllers\PendudukController;
 use App\Http\Controllers\PerangkatController;
@@ -31,6 +32,7 @@ Route::resource('penduduk', PendudukController::class);
 Route::resource('surat', SuratController::class);
 Route::resource('rekappenduduk', RekapPendudukController::class);
 Route::resource('pindah', PindahController::class);
+Route::resource('kematian', KematianController::class);
 Route::resource('sktm', SKTMController::class);
 Route::resource('skck', SKCKController::class);
 Route::resource('perangkat', PerangkatController::class);

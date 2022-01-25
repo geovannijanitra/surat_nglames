@@ -7,13 +7,6 @@
         <h4 class="page-title">Data Surat Keterangan</h4>
         <p class="text-muted page-title-alt">Data Surat Keterangan dapat ditambahkan dan dilihat pada tabel di bawah ini</p>
     </div>
-    {{-- <div class="col-sm-2">
-        <br>
-        <a  type="button" class="btn btn-default waves-effect waves-light" data-toggle="modal" data-target="#full-width-modal">Tambah
-            <span class="btn-label btn-label-right"><i class="fa fa-plus"></i>
-            </span>
-        </a>
-    </div> --}}
 </div>
 {{-- add --}}
 <div class="row">

@@ -29,6 +29,7 @@ class CreatePendudukTable extends Migration
             $table->string('pendidikan');
             $table->string('namaAyah');
             $table->string('namaIbu');
+            $table->string('anakKe')->nullable();
             $table->timestamps();
         });
     }

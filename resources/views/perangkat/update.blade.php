@@ -12,29 +12,33 @@
                 @csrf
                 @method('PATCH')
                 <div class="form-group">
-                    <label for="nama">Nama*</label>
+                    <label for="nikPerangkat">NIK </label>
+                    <input type="text" name="nikPerangkat" parsley-trigger="change" required placeholder="Masukkan NIK" class="form-control" value="{{ $perangkat->nikPerangkat }}">
+                </div>
+                <div class="form-group">
+                    <label for="nama">Nama </label>
                     <input type="text" name="nama" parsley-trigger="change" required placeholder="Masukkan Nama" class="form-control" value="{{$perangkat->nama}}">
                 </div>
                 <div class="form-group">
-                    <label for="tanggalLahir">Tanggal Lahir*</label>
+                    <label for="tanggalLahir">Tanggal Lahir </label>
                     <input type="date" name="tanggalLahir" parsley-trigger="change" required placeholder="dd/mm/yyyy" class="form-control" value="{{$perangkat->tanggalLahir}}">
                 </div>
                 <div class="form-group">
-                    <label for="jabatan">Jabatan*</label>
+                    <label for="jabatan">Jabatan </label>
 
                         <select name="jabatan" class="form-control" value="{{$perangkat->jabatan}}">
-                            <option value="{{ $perangkat->jabatan }}"  selected></select>
+                            <option value="{{ $perangkat->jabatan }}"  selected></option>
                             <option value="Pejabat Kelurahan">Pejabat Kelurahan</option>
                             <option value="Ketua RT atau RW">Ketua RT atau RW</option>
                         </select>
 
                 </div>
                 <div class="form-group">
-                    <label for="detail">Detail*</label>
+                    <label for="detail">Detail </label>
                     <input type="text" name="detail" parsley-trigger="change" required placeholder="Masukkan Detail Pekerjaan" class="form-control" value="{{$perangkat->detail}}">
                 </div>
                 <div class="form-group">
-                    <label for="alamat">Alamat*</label>
+                    <label for="alamat">Alamat </label>
                     <input type="text" name="alamat" parsley-trigger="change" required placeholder="Masukkan Alamat" class="form-control" value="{{$perangkat->alamat}}">
                 </div>
 

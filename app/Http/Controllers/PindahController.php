@@ -34,7 +34,8 @@ class PindahController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {   $perangkat = Perangkat::all();
+    {
+        $perangkat = Perangkat::all();
         $surat = Surat::all();
         $penduduk = Penduduk::all();
         return view('pindah.create', compact('surat', 'penduduk', 'perangkat'));

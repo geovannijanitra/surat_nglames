@@ -23,7 +23,8 @@ class Penduduk extends Model
         'kewarganegaraan',
         'pendidikan',
         'namaAyah',
-        'namaIbu'
+        'namaIbu',
+        'anakKe'
     ];
     public function kk()
     {

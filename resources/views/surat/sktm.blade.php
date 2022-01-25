@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>contoh surat pengunguman</title>
+	<title>SKTM</title>
 	<style type="text/css">
 		table {
 			border-style: double;

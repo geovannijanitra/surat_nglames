@@ -7,13 +7,6 @@
         <h4 class="page-title">Tambah Data Surat Keterangan Pindah</h4>
         <p class="text-muted page-title-alt">Masukkan Data</p>
     </div>
-    {{-- <div class="col-sm-2">
-        <br>
-        <a  type="button" class="btn btn-default waves-effect waves-light" data-toggle="modal" data-target="#full-width-modal">Tambah
-            <span class="btn-label btn-label-right"><i class="fa fa-plus"></i>
-            </span>
-        </a>
-    </div> --}}
 </div>
 <div class="row">
     <div class="col-lg-12">
@@ -26,15 +19,7 @@
                         <input id="jenis" name="jenis" type="text" placeholder="Nomor Surat" required
                             class="form-control" disabled value="Surat Keterangan Pindah">
                     </div>
-                    {{-- <div class="form-group">
-                        <label class="control-label">NIK - Nama Pengikut</label>
-                        <select class="form-control select2" placeholder="Nama" required id="nik" name="pindah1">
-                        <option value="" disabled selected> Pilih nama pengikut </option>
-                            @foreach ($penduduk as $pndk)
-                            <option value="{{ $pndk->nik }}">{{ $pndk->nik}} - {{ $pndk->nama }}</option>
-                            @endforeach
-                        </select>
-                    </div> --}}
+
                     <div class="form-group">
                         <label for="jabatan" class="control-label">Pejabat Kelurahan (Yang bertanda tangan)</label>
                         <select name="tandatangan" id="tandatangan" class="form-control select2">
@@ -75,15 +60,15 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                        <label for="keperluan">Pindah ke Desa/Kelurahan</label>
-                        <input id="desaKe" name="desaKe" type="text" placeholder="Masukkan Desa/Kelurahan Pindahan" required
-                            class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="keperluan">Pindah ke Kecamatan</label>
-                        <input id="kecamatanKe" name="kecamatanKe" type="text" placeholder="Masukkan Kecamatan Pindahan" required
-                            class="form-control">
-                    </div>
+                            <label for="keperluan">Pindah ke Desa/Kelurahan</label>
+                            <input id="desaKe" name="desaKe" type="text" placeholder="Masukkan Desa/Kelurahan Pindahan" required
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="keperluan">Pindah ke Kecamatan</label>
+                            <input id="kecamatanKe" name="kecamatanKe" type="text" placeholder="Masukkan Kecamatan Pindahan" required
+                                class="form-control">
+                        </div>
                     </div>
                     <div class="col-md-6">
 

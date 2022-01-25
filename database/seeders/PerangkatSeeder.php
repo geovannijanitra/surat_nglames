@@ -16,10 +16,10 @@ class PerangkatSeeder extends Seeder
     {
         DB::table('perangkat')->insert([
             'idPerangkat' => '1',
-            'nama'=>'Jono',
+            'nama'=>'Tri Wahyuni',
             'tanggalLahir'=>'2012-12-12',
             'jabatan'=>'Pejabat Kelurahan',
-            'detail'=>'Lurah Nglames',
+            'detail'=>'Sekretaris Kelurahan',
             'alamat'=>'Jl Wagyono A5',
 
         ]);

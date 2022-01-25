@@ -11,15 +11,12 @@ class Perangkat extends Model
     protected $primaryKey = 'idPerangkat';
     protected $fillable =
     [
+        'nikPerangkat',
         'nama',
         'tanggalLahir',
         'jabatan',
         'detail',
         'alamat',
-        // 'kelurahan',
-        // 'kecamatan',
-        // 'kota',
-        // 'provinsi'
     ];
     public function surat()
     {

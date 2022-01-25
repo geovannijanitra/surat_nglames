@@ -36,16 +36,16 @@
         <div class="card-box">
             <div class="bar-widget">
                 <div class="table-box">
-                    <a href="">
+                    <a href="/skck">
                         <div class="table-detail">
                         <div class="iconbox bg-purple">
                             <i class="md-perm-contact-cal"></i>
                         </div>
                     </div>
 
-                    <div class="table-detail">
-                        <h4 class="m-t-0 m-b-5"><b>Surat Keterangan untuk SKCK</b></h4>
-                        <h5 class="text-muted m-b-0 m-t-0">Digunakan untuk mengajukan pembuatan SKCK</h5>
+                    <div class="table-detail" href="/skck">
+                        <h4 href="/skck" class="m-t-0 m-b-5"><b>Surat Keterangan untuk SKCK</b></h4>
+                        <h5 href="/skck" class="text-muted m-b-0 m-t-0">Digunakan untuk mengajukan pembuatan SKCK</h5>
                     </div>
 
                     </a>
@@ -59,16 +59,16 @@
         <div class="card-box">
             <div class="bar-widget">
                 <div class="table-box">
-                    <a href="">
+                    <a href="/sktm">
                         <div class="table-detail">
                         <div class="iconbox bg-warning">
                             <i class="md-receipt"></i>
                         </div>
                     </div>
 
-                    <div class="table-detail">
-                        <h4 class="m-t-0 m-b-5"><b>Surat Keterangan Tidak Mampu</b></h4>
-                        <h5 class="text-muted m-b-0 m-t-0">Digunakan untuk mengajukan beasiswa di sekolah</h5>
+                    <div class="table-detail" href="/sktm">
+                        <h4 href="/sktm" class="m-t-0 m-b-5"><b>Surat Keterangan Tidak Mampu</b></h4>
+                        <h5 href="/sktm" class="text-muted m-b-0 m-t-0">Digunakan untuk mengajukan beasiswa di sekolah</h5>
                     </div>
 
                     </a>
@@ -81,16 +81,16 @@
         <div class="card-box">
             <div class="bar-widget">
                 <div class="table-box">
-                    <a href="">
+                    <a href="/pindah">
                           <div class="table-detail">
                         <div class="iconbox bg-pink">
                             <i class="md-pin-drop"></i>
                         </div>
                     </div>
 
-                    <div class="table-detail">
-                        <h4 class="m-t-0 m-b-5"><b>Surat Keterangan Pindah</b></h4>
-                        <h5 class="text-muted m-b-0 m-t-0">Digunakan sebagai keterangan pindah penduduk</h5>
+                    <div class="table-detail" href="/pindah">
+                        <h4 href="/pindah" class="m-t-0 m-b-5"><b>Surat Keterangan Pindah</b></h4>
+                        <h5 href="/pindah" class="text-muted m-b-0 m-t-0">Digunakan sebagai keterangan pindah penduduk</h5>
                     </div>
 
                     </a>
@@ -103,16 +103,16 @@
         <div class="card-box">
             <div class="bar-widget">
                 <div class="table-box">
-                    <a href="">
+                    <a href="/kelahiran">
                         <div class="table-detail">
                         <div class="iconbox bg-custom">
                             <i class="md-keyboard-alt"></i>
                         </div>
                     </div>
 
-                    <div class="table-detail">
-                        <h4 class="m-t-0 m-b-5"><b>Surat Keterangan Kelahiran</b></h4>
-                        <h5 class="text-muted m-b-0 m-t-0">Digunakan untuk menyatakan penduduk yang telah lahir</h5>
+                    <div class="table-detail" href="/kelahiran">
+                        <h4 href="/kelahiran" class="m-t-0 m-b-5"><b>Surat Keterangan Kelahiran</b></h4>
+                        <h5 href="/kelahiran" class="text-muted m-b-0 m-t-0">Digunakan untuk menyatakan penduduk yang telah lahir</h5>
                     </div>
                     </a>
 
@@ -125,16 +125,16 @@
         <div class="card-box">
             <div class="bar-widget">
                 <div class="table-box">
-                    <a href="">
+                    <a href="/kematian">
                         <div class="table-detail">
                         <div class="iconbox bg-danger">
                             <i class="md-local-florist"></i>
                         </div>
                     </div>
 
-                    <div class="table-detail">
-                        <h4 class="m-t-0 m-b-5"><b>Surat Keterangan Kematian</b></h4>
-                        <h5 class="text-muted m-b-0 m-t-0">Digunakan untuk menyatakan penduduk yang meninggal</h5>
+                    <div class="table-detail" href="/kematian">
+                        <h4 href="/kematian" class="m-t-0 m-b-5"><b>Surat Keterangan Kematian</b></h4>
+                        <h5 href="/kematian" class="text-muted m-b-0 m-t-0">Digunakan untuk menyatakan penduduk yang meninggal</h5>
                     </div>
                     </a>
 

@@ -101,7 +101,7 @@
                 <tr>
                     <td colspan="6" align="center"><font size="12px">
                         <b>SURAT KETERANGAN KEMATIAN</b><br>
-                        No. : 472.12/ ... /402.409.01/</font>
+                        No. : 472.12/ {{ $noSurat }} /402.409.01/</font>
                     </td>
                 </tr>
                 <tr>

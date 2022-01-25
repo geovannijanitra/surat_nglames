@@ -90,6 +90,7 @@ class PendudukController extends Controller
             'nama' => $request->nama,
             'tempatLahir' => $request->tempatLahir,
             'tanggalLahir' => $request->tanggalLahir,
+            'anakKe' => $request->anakKe,
             'kelamin' => $request->kelamin,
             'agama' => $request->agama,
             'status' => $request->status,

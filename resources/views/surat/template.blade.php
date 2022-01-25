@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>contoh surat pengunguman</title>
+	<title>SURAT KETERANGAN DOMISILI</title>
 	<style type="text/css">
 		table {
 			border-style: double;

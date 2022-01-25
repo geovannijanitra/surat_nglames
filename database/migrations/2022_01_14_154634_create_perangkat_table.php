@@ -15,6 +15,7 @@ class CreatePerangkatTable extends Migration
     {
         Schema::create('perangkat', function (Blueprint $table) {
             $table->bigInteger('idPerangkat')->unique()->unsigned()->autoIncrement();
+            $table->string('nikPerangkat')->nullable();
             $table->string('nama');
             $table->date('tanggalLahir');
             // $table->string('pekerjaan');

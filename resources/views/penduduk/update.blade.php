@@ -51,18 +51,29 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Tempat Lahir</label>
-                        <div class="col-md-10">
-                            <input type="text" name="tempatLahir" class="form-control" placeholder="Masukkan Tempat Lahir" value="{{$penduduk->tempatLahir}}" required>
+                    <div class="col-md-6">
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">TTL</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="tempatLahir" class="form-control" placeholder="Masukkan Tempat Lahir" value="{{$penduduk->tempatLahir}}"required>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Tanggal Lahir</label>
-                        <div class="col-md-10">
-                            <input type="date" class="form-control" name="tanggalLahir" placeholder="mm/dd/yyyy" value="{{$penduduk->tanggalLahir}}">
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="date" class="form-control" name="tanggalLahir" placeholder="mm/dd/yyyy" value="{{$penduduk->tanggalLahir}}">
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Anak ke</label>
+                            <div class="col-md-10">
+                                <input type="number" min="0" name="anakKe" class="form-control" placeholder="Anak ke-" value="{{$penduduk->anakKe}}" required>
+                            </div>
+                        </div>
                     <div class="form-group">
                         <label class="col-md-2 control-label">Jenis Kelamin</label>
                         <div class="col-md-10">
