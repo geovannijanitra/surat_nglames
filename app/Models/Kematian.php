@@ -11,12 +11,13 @@ class Kematian extends Model
     protected $primaryKey = 'idKematian';
     protected $fillable =
     [
-             'tandatangan',
-             'nik',
-             'noSurat',
-             'tanggalSurat',
-             'jenisSurat',
+            'tandatangan',
+            'nik',
+            'noSurat',
+            'tanggalSurat',
+            'jenisSurat',
             'tanggalKematian' ,
+            'umurJenazah',
             'pukulKematian' ,
             'sebabKematian' ,
             'tempatKematian' ,
@@ -25,12 +26,14 @@ class Kematian extends Model
             'nikAyah' ,
             'namaAyah' ,
             'tanggalLahirAyah' ,
+            'umurAyah',
             'pekerjaanAyah' ,
             'alamatAyah' ,
 
             'nikIbu' ,
             'namaIbu' ,
             'tanggalLahirIbu' ,
+            'umurIbu',
             'pekerjaanIbu' ,
             'alamatIbu' ,
 
@@ -38,15 +41,16 @@ class Kematian extends Model
             'nikPelapor' ,
             'namaPelapor' ,
             'tanggalLahirPelapor' ,
+            'umurPelapor',
             'pekerjaanPelapor' ,
             'alamatPelapor' ,
 
-             'saksi1',
-             'saksi2',
+            'saksi1',
+            'saksi2',
 
 
     ];
-    public function nik()
+    public function penduduk()
     {
         return $this->belongsTo(Penduduk::class, 'nik');
     }

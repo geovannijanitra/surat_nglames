@@ -22,5 +22,17 @@ class Perangkat extends Model
     {
         return $this->hasMany(Surat::class, 'tandatangan');
     }
+    public function tandatangan()
+    {
+        return $this->hasMany(Kematian::class, 'tandatangan');
+    }
+    public function saksi1()
+    {
+        return $this->hasMany(Kematian::class, 'saksi1');
+    }
+    public function saksi2()
+    {
+        return $this->hasMany(Kematian::class, 'saksi2');
+    }
 }
 

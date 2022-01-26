@@ -8,7 +8,7 @@
             <p class="text-muted font-13 m-b-30">
                 Masukkan data
             </p>
-            <form data-parsley-validate method="POST" action="{{url('/pindah')}}" enctype="multipart/form-data" autocomplete="off">
+            <form data-parsley-validate method="POST" action="{{url('/kematian')}}" enctype="multipart/form-data" autocomplete="off">
                 @csrf
                 <div class="col-md-6">
                     <div  class="form-group">
@@ -41,37 +41,12 @@
                         <input id="noSurat" name="noSurat" type="number" placeholder="Nomor Surat" required
                             class="form-control">
                     </div>
-                    <div class="form-group">
-                        <label for="noSurat">NIK Ayah</label>
-                        <input id="nikAyah" name="nikAyah" type="number" placeholder="Masukkan NIK Ayah Jenazah" required
-                            class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="noSurat">Nama Ayah</label>
-                        <input id="namaAyah" name="namaAyah" type="text" placeholder="Masukkan Nama Ayah Jenazah" required
-                            class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="noSurat">Tanggal Lahir Ayah</label>
-                        <input id="tanggalLahirAyah" name="tanggalLahirAyah" type="date" placeholder="dd/mm/yyyy" required
-                            class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="noSurat">Pekerjaan Ayah</label>
-                        <input id="pekerjaanAyah" name="pekerjaanAyah" type="text" placeholder="Masukkan Pekerjaan Ayah Jenazah" required
-                            class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="noSurat">Alamat Ayah</label>
-                        <input id="alamatAyah" name="alamatAyah" type="text" placeholder="Masukkan Alamat Ayah Jenazah" required
-                            class="form-control">
-                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="keperluan">Saksi 1</label>
-                            <select name="tandatangan" id="tandatangan" class="form-control select2">
+                            <select name="saksi1" id="saksi1" class="form-control select2">
                             <option value="" disabled selected> Pilih Saksi </option>
                             @foreach ($rt as $rt)
                             <option value="{{ $rt->idPerangkat }}">{{ $rt->detail}} - {{ $rt->nama }}
@@ -83,7 +58,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="keperluan">Saksi 2</label>
-                            <select name="tandatangan" id="tandatangan" class="form-control select2">
+                            <select name="saksi2" id="saksi2" class="form-control select2">
                             <option value="" disabled selected> Pilih Saksi</option>
                             @foreach ($rt2 as $rt2)
                             <option value="{{ $rt2->idPerangkat }}">{{ $rt2->detail}} - {{ $rt2->nama }}
@@ -95,7 +70,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="keperluan">Sebab Kematian</label>
-                            <input id="alasan" name="alasan" type="text" placeholder="Masukkan Sebab Kematian" required class="form-control">
+                            <input id="sebabKematian" name="sebabKematian" type="text" placeholder="Masukkan Sebab Kematian" required class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -129,30 +104,98 @@
                         <input id="tempatKematian" name="tempatKematian" type="text" placeholder="Masukkan Tempat Kematian" required
                         class="form-control">
                     </div>
-                    <div class="form-group">
-                        <label for="noSurat">NIK Ibu</label>
-                        <input id="nikIbu" name="nikIbu" type="text" placeholder="Masukkan NIK Ibu Jenazah" required
-                            class="form-control">
+                </div>
+                <div class="col-md-12">
+                    <div class="m-t-0 header-title" align="center" ><h4><b>---------------------------------------------------------------------------------------------------  Data Pelapor  ---------------------------------------------------------------------------------------------------</b></h4></div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="noSurat">NIK Pelapor</label>
+                            <input id="nikPelapor" name="nikPelapor" type="number" placeholder="Masukkan NIK Pelapor"
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="noSurat">Nama Pelapor</label>
+                            <input id="namaPelapor" name="namaPelapor" type="text" placeholder="Masukkan Nama Pelapor" required
+                                class="form-control">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="noSurat">Nama Ibu</label>
-                        <input id="namaIbu" name="namaIbu" type="text" placeholder="Masukkan Nama Ibu Jenazah" required
-                            class="form-control">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="noSurat">Alamat Pelapor</label>
+                            <input id="alamatPelapor" name="alamatPelapor" type="text" placeholder="Masukkan Alamat Pelapor"
+                                class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="noSurat">Tanggal Lahir Pelapor</label>
+                                <input id="tanggalLahirPelapor" name="tanggalLahirPelapor" type="date" placeholder="Masukkan NIK Ibu Jenazah"
+                                    class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="noSurat">Pekerjaan Pelapor</label>
+                                <input id="namaIbu" name="namaIbu" type="text" placeholder="Masukkan Nama Ibu Jenazah" required
+                                    class="form-control">
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="noSurat">Tanggal Lahir Ibu</label>
-                        <input id="tanggalLahirIbu" name="tanggalLahirIbu" type="date" placeholder="dd/mm/yyyy" required
-                            class="form-control">
+                </div>
+                <div class="col-md-12">
+                    <div class="m-t-0 header-title" align="center" ><h4><b>--------------------------------------------------------------------------------------------  Data Orang Tua Jenazah  --------------------------------------------------------------------------------------------</b></h4></div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="noSurat">NIK Ayah</label>
+                            <input id="nikAyah" name="nikAyah" type="number" placeholder="Masukkan NIK Ayah Jenazah"
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="noSurat">Nama Ayah</label>
+                            <input id="namaAyah" name="namaAyah" type="text" placeholder="Masukkan Nama Ayah Jenazah" required
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="noSurat">Tanggal Lahir Ayah</label>
+                            <input id="tanggalLahirAyah" name="tanggalLahirAyah" type="date" placeholder="dd/mm/yyyy"
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="noSurat">Pekerjaan Ayah</label>
+                            <input id="pekerjaanAyah" name="pekerjaanAyah" type="text" placeholder="Masukkan Pekerjaan Ayah Jenazah"
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="noSurat">Alamat Ayah</label>
+                            <input id="alamatAyah" name="alamatAyah" type="text" placeholder="Masukkan Alamat Ayah Jenazah"
+                                class="form-control">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="noSurat">Pekerjaan Ibu</label>
-                        <input id="pekerjaanIbu" name="pekerjaanIbu" type="text" placeholder="Masukkan Pekerjaan Ibu" required
-                            class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="noSurat">Alamat Ibu</label>
-                        <input id="alamatIbu" name="alamatIbu" type="text" placeholder="Masukkan Alamat Ibu Jenazah" required
-                            class="form-control">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="noSurat">NIK Ibu</label>
+                            <input id="nikIbu" name="nikIbu" type="text" placeholder="Masukkan NIK Ibu Jenazah"
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="noSurat">Nama Ibu</label>
+                            <input id="namaIbu" name="namaIbu" type="text" placeholder="Masukkan Nama Ibu Jenazah" required
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="noSurat">Tanggal Lahir Ibu</label>
+                            <input id="tanggalLahirIbu" name="tanggalLahirIbu" type="date" placeholder="dd/mm/yyyy"
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="noSurat">Pekerjaan Ibu</label>
+                            <input id="pekerjaanIbu" name="pekerjaanIbu" type="text" placeholder="Masukkan Pekerjaan Ibu"
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="noSurat">Alamat Ibu</label>
+                            <input id="alamatIbu" name="alamatIbu" type="text" placeholder="Masukkan Alamat Ibu Jenazah"
+                                class="form-control">
+                        </div>
                     </div>
                 </div>
                 <div class="form-group text-right m-b-0">

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKematianTable extends Migration
+class CreateKelahiranTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,38 +13,34 @@ class CreateKematianTable extends Migration
      */
     public function up()
     {
-        Schema::create('kematian', function (Blueprint $table) {
-            $table->bigInteger('idKematian')->unique()->unsigned()->autoIncrement();
+        Schema::create('kelahiran', function (Blueprint $table) {
+            $table->bigInteger('idKelahiran')->unique()->unsigned()->autoIncrement();
             $table->bigInteger('tandatangan')->unsigned()->nullable();
             $table->foreign('tandatangan')->references('idPerangkat')->on('perangkat')->onUpdate('cascade');
             $table->bigInteger('nik')->unsigned();
             $table->foreign('nik')->references('nik')->on('penduduk')->onUpdate('cascade');
-            $table->string('umurJenazah');
 
             $table->string('tanggalSurat');
             $table->string('noSurat');
             $table->string('jenisSurat');
 
-            $table->string('tanggalKematian');
-            $table->string('pukulKematian');
-            $table->string('sebabKematian');
-            $table->string('tempatKematian');
-            $table->string('yangMenerangkan');
+            $table->string('namaAnak')->nullable();
+            $table->string('kelaminAnak')->nullable();
+            $table->string('tempatDilahirkan')->nullable();
+            $table->string('tempatKelahiran')->nullable();
+            $table->string('hariLahirAnak')->nullable();
+            $table->string('tanggalLahirAnak')->nullable();
+            $table->string('pukulKelahiran')->nullable();
+            $table->string('jenisKelahiran')->nullable();
+            $table->string('kelahiranKe')->nullable();
+            $table->string('penolongKelahiran')->nullable();
+            $table->string('beratBayi')->nullable();
+            $table->string('panjangBayi')->nullable();
 
-            $table->string('nikAyah')->nullable();
-            $table->string('namaAyah')->nullable();
-            $table->string('tanggalLahirAyah')->nullable();
-            $table->string('umurAyah')->nullable();
-            $table->string('pekerjaanAyah')->nullable();
-            $table->string('alamatAyah')->nullable();
-
-            $table->string('nikIbu')->nullable();
-            $table->string('namaIbu')->nullable();
-            $table->string('tanggalLahirIbu')->nullable();
-            $table->string('umurIbu')->nullable();
-            $table->string('pekerjaanIbu')->nullable();
-            $table->string('alamatIbu')->nullable();
-
+            $table->bigInteger('ibu')->unsigned()->nullable();
+            $table->foreign('ibu')->references('nik')->on('penduduk')->onUpdate('cascade');
+            $table->bigInteger('ayah')->unsigned()->nullable();
+            $table->foreign('ayah')->references('nik')->on('penduduk')->onUpdate('cascade');
 
             $table->string('nikPelapor')->nullable();
             $table->string('namaPelapor')->nullable();
@@ -69,6 +65,6 @@ class CreateKematianTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kematian');
+        Schema::dropIfExists('kelahiran');
     }
 }
