@@ -16,7 +16,7 @@ class Kelahiran extends Model
          'tempatDilahirkan',
          'tempatKelahiran',
          'hariLahirAnak',
-         'tanggalLahirAnak',
+         'tanggalLahir',
          'pukulKelahiran',
          'jenisKelahiran',
          'kelahiranKe',

@@ -54,3 +54,7 @@ Route::get('penduduk/{id}/keluarga', [KKController::class, 'keluarga']);
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
