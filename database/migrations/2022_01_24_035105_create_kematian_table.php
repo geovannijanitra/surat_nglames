@@ -58,13 +58,16 @@ class CreateKematianTable extends Migration
             $table->bigInteger('saksi2')->unsigned()->nullable();
             $table->foreign('saksi2')->references('idPerangkat')->on('perangkat')->onUpdate('cascade');
 
+            $table->string('umurSaksi1')->nullable();
+            $table->string('umurSaksi2')->nullable();
+
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
+   oooooo  *
      * @return void
      */
     public function down()

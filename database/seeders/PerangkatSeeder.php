@@ -23,5 +23,30 @@ class PerangkatSeeder extends Seeder
             'alamat'=>'Jl Wagyono A5',
 
         ]);
-    }
+
+        DB::table('perangkat')->insert([
+                'idPerangkat' => '2',
+                'nama' => 'Budi',
+                'tanggalLahir' => '2012-12-12',
+                'jabatan' => 'Ketua RT atau RW',
+                'detail' => 'Ketua RT 3',
+                'alamat' => 'Jl Wagyono A6',
+
+        ]);
+
+        DB::table('perangkat')->insert([
+                'idPerangkat' => '3',
+                'nama' => 'Adi',
+                'tanggalLahir' => '2012-12-12',
+                'jabatan' => 'Ketua RT atau RW',
+                'detail' => 'Ketua RT 9',
+                'alamat' => 'Jl Wagyono A3',
+
+            ]
+        );
+
+
+
+
+}
 }

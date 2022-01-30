@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kematian;
+use App\Models\Kelahiran;
 use App\Models\Surat;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class RekapSuratController extends Controller
     {
         $surat = Surat::all();
         $kematian = Kematian::all();
-        return view('rekap.rekapsurat', compact('surat', 'kematian'));
+        $kelahiran = Kelahiran::all();
+        return view('rekap.rekapsurat', compact('surat', 'kematian', 'kelahiran'));
     }
 
     /**

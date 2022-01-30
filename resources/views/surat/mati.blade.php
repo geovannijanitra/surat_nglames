@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>contoh surat pengunguman</title>
+	<title>Surat Keterangan Kematian No.{{ $noSurat }}</title>
 	<style type="text/css">
 		body {
 			border-style: double;

@@ -30,4 +30,14 @@ class Penduduk extends Model
     {
         return $this->belongsTo(KK::class, 'no_kk');
     }
+
+    public function detailAyah()
+    {
+        return $this->hasMany(Kelahiran::class, 'ayah');
+    }
+
+    public function detailIbu()
+    {
+        return $this->hasMany(Kelahiran::class, 'ibu');
+    }
 }

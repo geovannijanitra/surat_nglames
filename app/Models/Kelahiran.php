@@ -11,30 +11,49 @@ class Kelahiran extends Model
     protected $primaryKey = 'idKelahiran';
     protected $fillable =
     [
-         'namaAnak',
-         'kelaminAnak',
-         'tempatDilahirkan',
-         'tempatKelahiran',
-         'hariLahirAnak',
-         'tanggalLahir',
-         'pukulKelahiran',
-         'jenisKelahiran',
-         'kelahiranKe',
-         'penolongKelahiran',
-         'beratBayi',
-         'panjangBayi',
+        'noSurat',
+        'jenisSurat',
+        'tanggalSurat',
+        'namaAnak' ,
+        'kelaminAnak',
+        'tempatKelahiran' ,
+        'tempatDilahirkan' ,
+        'hariLahirAnak' ,
+        'tanggalLahirAnak',
+        'pukulKelahiran',
+        'jenisKelahiran' ,
+        'kelahiranKe',
+        'penolongKelahiran' ,
+        'beratBayi',
+        'panjangBayi',
 
-        'ayah',
-        'ibu',
+        'ayah' ,
+        'ibu' ,
+        'tanggalPerkawinan',
 
-        'nikPelapor',
-        'namaPelapor',
-        'tanggalLahirPelapor',
-        'umurPelapor',
-        'pekerjaanPelapor',
+        'nikPelapor' ,
+        'namaPelapor' ,
+        'tanggalLahirPelapor' ,
+        'umurPelapor' ,
+        'pekerjaanPelapor' ,
         'alamatPelapor',
 
-        'saksi1',
+        'umurAyah',
+        'umurIbu',
+        'umurSaksi1',
+        'umurSaksi2',
+
+        'tandatangan' ,
+        'saksi1' ,
         'saksi2',
     ];
+
+    public function detailAyah(){
+        return $this->belongsTo(Penduduk::class,'ayah');
+    }
+
+    public function detailIbu()
+    {
+        return $this->belongsTo(Penduduk::class, 'ibu');
+    }
 }

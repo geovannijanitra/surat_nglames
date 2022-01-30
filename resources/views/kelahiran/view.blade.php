@@ -39,8 +39,8 @@
                         <td>{{ $kelahiran->noSurat }}</td>
                         <td>{{ $kelahiran->tanggalSurat }}</td>
                         <td>{{ $kelahiran->namaAnak }}</td>
-                        <td>{{ $kelahiran->penduduk['nama'] }}</td>
-                        <td>{{ $kelahiran->penduduk['nama'] }}</td>
+                        <td>{{ $kelahiran->detailAyah['nama']}}</td>
+                        <td>{{ $kelahiran->detailIbu['nama']}}</td>
                         <td>{{ $kelahiran->namaPelapor }}</td>
                         <td>
                             <a href="/kelahiran/{{ $kelahiran->idKelahiran }}/printKelahiran" class="btn btn-icon waves-effect waves-light btn-warning col-md-5"> <i class="md md-print"></i></a>

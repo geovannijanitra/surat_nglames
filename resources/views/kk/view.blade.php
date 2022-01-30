@@ -74,7 +74,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="noKk">No KK*</label>
-                                    <input min="1111111111111111" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;" name="noKk" parsley-trigger="change" required placeholder="Masukkan No KK" class="form-control">
+                                    <input type="number" min="1111111111111111" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;" name="noKk" parsley-trigger="change" required placeholder="Masukkan No KK" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="alamat">Alamat*</label>

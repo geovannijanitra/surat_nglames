@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SURAT KETERANGAN DOMISILI</title>
+	<title>SURAT KETERANGAN DOMISILI No.{{ $noSurat }}</title>
 	<style type="text/css">
 		table {
 			border-style: double;

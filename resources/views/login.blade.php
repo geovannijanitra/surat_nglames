@@ -15,9 +15,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-        <form action="/login" method="POST" class="login-email">
+        <form action="{{ route('login') }}" method="POST" class="login-email">
             @csrf
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Aplikasi dan Arsip Surat Keluar</p>
+            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Aplikasi Arsip Surat Keluar Kelurahan Nglames</p>
             <div class="input-group">
                 <input type="text" class="form-control @error('email') is invalid @enderror" placeholder="email" autofocus name="email" id="email" value="{{ old('email') }}" required>
                 @error('email')

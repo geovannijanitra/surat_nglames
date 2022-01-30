@@ -32,6 +32,25 @@
 
                     </tr>
                     @endforeach
+                    @foreach ( $kematian as $kematian)
+                    <tr>
+                        <td>{{ $kematian->tanggalSurat }}</td>
+                        <td>{{ $kematian->jenisSurat }}</td>
+                        <td>{{ $kematian->noSurat }}</td>
+                        <td>{{ $kematian->penduduk['nama'] }}</td>
+
+                    </tr>
+                    @endforeach
+                    @foreach ( $kelahiran as $kelahiran)
+                    <tr>
+                        <td>{{ $kelahiran->tanggalSurat }}</td>
+                        <td>{{ $kelahiran->jenisSurat }}</td>
+                        <td>{{ $kelahiran->noSurat }}</td>
+                        <td>{{ $kelahiran->namaAnak }}</td>
+
+                    </tr>
+                    @endforeach
+
                 </tbody>
             </table>
         </div>

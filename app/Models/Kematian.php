@@ -47,6 +47,9 @@ class Kematian extends Model
 
             'saksi1',
             'saksi2',
+            'umurSaksi1',
+            'umurSaksi2',
+
 
 
     ];

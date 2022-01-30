@@ -72,7 +72,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="nikPerangkat">NIK</label>
-                                    <input type="text" name="nikPerangkat" parsley-trigger="change" required placeholder="Masukkan NIK" class="form-control">
+                                    <input type="text" min="1111111111111111" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;" name="nikPerangkat" parsley-trigger="change" required placeholder="Masukkan NIK" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="nama">Nama</label>

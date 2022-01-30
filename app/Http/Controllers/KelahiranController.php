@@ -3,16 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kelahiran;
-use App\Models\Kematian;
 use App\Models\Penduduk;
 use App\Models\KK;
 use App\Models\Perangkat;
 use App\Models\Surat;
-use App\Models\Pengikut;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\DB;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Date;
 
 class KelahiranController extends Controller
 {
@@ -40,11 +39,14 @@ class KelahiranController extends Controller
         $perangkat = Perangkat::where('jabatan','Pejabat Kelurahan')->get();
         $rt = Perangkat::where('jabatan', 'Ketua RT atau RW')->get();
         $rt2 = Perangkat::where('jabatan', 'Ketua RT atau RW')->get();
+        $ayah = Penduduk::where('kelamin', 'Laki-laki')->get();
+        $ibu = Penduduk::where('kelamin', 'Perempuan')->get();
+
 
 
         $kelahiran = Kelahiran::all();
         $penduduk = Penduduk::all();
-        return view('kelahiran.create', compact('rt2','rt','kelahiran', 'penduduk', 'perangkat'));
+        return view('kelahiran.create', compact('rt2','rt','kelahiran', 'penduduk', 'perangkat', 'ayah', 'ibu'));
     }
 
     /**
@@ -55,31 +57,34 @@ class KelahiranController extends Controller
      */
     public function store(Request $request)
     {
-        $detailWarga = Penduduk::where('nik', $request->nik)->first();
-        $keluarga = KK::where('noKk', $detailWarga->no_kk)->get();
-        // $lahir = date_create($detailWarga->tanggal_lahir);
-        // $now = date_create();
-        // $diff = date_diff($lahir, $now);
-        // echo $detailWarga->tanggalLahir;
-        // $lahir = new DateTime($detailWarga['tanggalLahir']);
-        $lahirAyah = new DateTime($detailWarga['tanggalLahir']);
-        $lahirIbu = new DateTime($detailWarga['tanggalLahir']);
+        $detailAyah = Penduduk::where('nik', $request->ayah)->first();
+        $detailIbu = Penduduk::where('nik', $request->ibu)->first();
+        $detailSaksi1 = Perangkat::where('idPerangkat', $request->saksi1)->first();
+        $detailSaksi2 = Perangkat::where('idPerangkat', $request->saksi2)->first();
+
+        $keluarga = KK::where('noKk', $detailAyah->no_kk)->get();
+
+        $lahirAyah = new DateTime($detailAyah['tanggalLahir']);
+        $lahirIbu = new DateTime($detailIbu['tanggalLahir']);
         $lahirPelapor = new DateTime($request->tanggalLahirPelapor);
+        $lahirSaksi2 = new DateTime($detailSaksi2['tanggalLahir']);
+        $lahirSaksi1 = new DateTime($detailSaksi1['tanggalLahir']);
         $now = \Carbon\Carbon::now('Asia/Jakarta');
 
-        // $interval = $lahir->diff($now);
         $intervalAyah = $lahirAyah->diff($now);
         $intervalIbu = $lahirIbu->diff($now);
+        $intervalSaksi1 = $lahirSaksi1->diff($now);
+        $intervalSaksi2 = $lahirSaksi2->diff($now);
         $intervalPelapor = $lahirPelapor->diff($now);
 
-        // $umurJenazah = $interval->format('%y');
         $umurAyah = $intervalAyah->format('%y');
         $umurIbu = $intervalIbu->format('%y');
+        $umurSaksi2 = $intervalSaksi2->format('%y');
+        $umurSaksi1 = $intervalSaksi1->format('%y');
         $umurPelapor = $intervalPelapor->format('%y');
 
         $bulan = $now->format('F');
         $tgl = $now->format('d');
-        // $jam = $now->format('H:i:s');
 
         switch ($bulan) {
             case "January":
@@ -125,21 +130,16 @@ class KelahiranController extends Controller
         $tglSurat = $tgl . ' ' . $bln . ' ' . $tahun;
 
 
-        // echo $jam;
-        // dd($request);
-
         Kelahiran::create([
-            'nik' => $detailWarga->nik,
             'noSurat' => '075/' . $request->noSurat . '/' . $tahun,
             'jenisSurat' => 'Kelahiran',
-            // 'umurJenazah' => $umurJenazah,
             'tanggalSurat' => $tglSurat,
             'namaAnak' => $request->namaAnak,
             'kelaminAnak' => $request->kelaminAnak,
             'tempatKelahiran' => $request->tempatKelahiran,
             'tempatDilahirkan' => $request->tempatDilahirkan,
-            'hariLahir' => $request->hariLahir,
-            'tanggalLahir' => $request->tanggalLahir,
+            'hariLahirAnak' => $request->hariLahirAnak,
+            'tanggalLahirAnak' => $request->tanggalLahirAnak,
             'pukulKelahiran' => $request->pukulKelahiran,
             'jenisKelahiran' => $request->jenisKelahiran,
             'kelahiranKe'=> $request->kelahiranKe,
@@ -149,64 +149,66 @@ class KelahiranController extends Controller
 
             'ayah'=>$request->ayah,
             'ibu' => $request->ibu,
+            'tanggalPerkawinan' => $request->tanggalPerkawinan,
+
             'nikPelapor' => $request->nikPelapor,
             'namaPelapor' => $request->namaPelapor,
             'tanggalLahirPelapor' => $request->tanggalLahirPelapor,
+            'umurPelapor' => $umurPelapor,
+            'pekerjaanPelapor' => $request->pekerjaanPelapor,
+            'alamatPelapor' => $request->alamatPelapor,
+
             'umurAyah' => $umurAyah,
             'umurIbu' => $umurIbu,
-            'umurPelapor' => $umurPelapor,
-            'alamatIbu' => $request->alamatIbu,
-            'pekerjaanPelapor' => $request->pekerjaanPelapor,
             'tandatangan' => $request->tandatangan,
             'saksi1' => $request->saksi1,
             'saksi2' => $request->saksi2,
+            'umurSaksi1' => $umurSaksi1,
+            'umurSaksi2' => $umurSaksi2,
         ]);
 
         return redirect('/kelahiran')->with(['success' => 'Data Surat Berhasil Ditambahkan!']);
     }
 
-    public function Kelahiran($id)
+    public function printKelahiran($id)
     {
         $surat = Kelahiran::find($id);
         $perangkat = Perangkat::where('idPerangkat', $surat->tandatangan)->first();
-        $penduduk = Penduduk::where('nik', $surat->nik)->first();
+        $ayah = Penduduk::where('nik', $surat->ayah)->first();
+        $ibu = Penduduk::where('nik', $surat->ibu)->first();
         $saksi1 = Perangkat::where('idPerangkat', $surat->saksi1)->first();
         $saksi2 = Perangkat::where('idPerangkat', $surat->saksi2)->first();
-        $kk = KK::where('noKk', $penduduk->no_kk)->first();
+        $kk = KK::where('noKk', $ayah->no_kk)->first();
         $kepala = DB::table('penduduk')
         ->where('no_kk', $kk->noKk)
             ->where('statushubungan', 'Kepala Keluarga')
             ->value('nama');
 
-        $tanggalLahir = date("d-m-Y", strtotime($penduduk->tanggalLahir));
+        $tanggalLahir = date("d-m-Y", strtotime($surat->tanggalLahirAnak));
+        $tanggalLahirAyah = date("d-m-Y", strtotime($ayah->tanggalLahir));
+        $tanggalLahirIbu = date("d-m-Y", strtotime($ibu->tanggalLahir));
 
         $pdf = PDF::loadView('surat.lahir', [
             'noKk' => $kk->noKk,
             'kepala' => $kepala,
             'noSurat' => $surat->noSurat,
             'tanggalSurat' => $surat->tanggalSurat,
-            // 'umurPenduduk' => $surat->umurPenduduk,
+
             'namaPerangkat' => $perangkat->nama,
             'jabatanPerangkat' => $perangkat->detail,
-            'RT' => $kk->RT,
-            'RW' => $kk->RW,
 
-
-            'nik' => $penduduk->nik,
-            'nama' => $penduduk->nama,
-            'kelamin' => $penduduk->kelamin,
-            'tanggalLahir' => $tanggalLahir,
-            'umurJenazah' => $surat->umurJenazah,
-            'tempatLahir' => $penduduk->tempatLahir,
-            'agama' => $penduduk->agama,
-            'pekerjaan' => $penduduk->pekerjaan,
-            'alamat' => $kk->alamat,
-            'anakKe' => $penduduk->anakKe,
-            'tanggalKematian' => $surat->tanggalKematian,
-            'pukulKematian' => $surat->pukulKematian,
-            'sebabKematian' => $surat->sebabKematian,
-            'tempatKematian' => $surat->tempatKematian,
-            'yangMenerangkan' => $surat->yangMenerangkan,
+            'namaAnak' => $surat->namaAnak,
+            'kelaminAnak' => $surat->kelaminAnak,
+            'tempatDilahirkan' => $surat->tempatDilahirkan,
+            'tempatKelahiran' => $surat->tempatKelahiran,
+            'hariLahirAnak' => $surat->hariLahirAnak,
+            'tanggalLahirAnak' => $tanggalLahir,
+            'pukulKelahiran' => $surat->pukulKelahiran,
+            'jenisKelahiran' => $surat->jenisKelahiran,
+            'kelahiranKe' => $surat->kelahiranKe,
+            'penolongKelahiran' => $surat->penolongKelahiran,
+            'beratBayi' => $surat->beratBayi,
+            'panjangBayi' => $surat->panjangBayi,
 
             'nikPelapor' => $surat->nikPelapor,
             'namaPelapor' => $surat->namaPelapor,
@@ -215,34 +217,37 @@ class KelahiranController extends Controller
             'pekerjaanPelapor' => $surat->pekerjaanPelapor,
             'alamatPelapor' => $surat->alamatPelapor,
 
-            'ayah' => $surat->ayah,
-            // 'namaAyah' => $surat->namaAyah,
-            // 'tanggalLahirAyah' => $surat->tanggalLahirAyah,
-            // 'umurAyah' => $surat->umurAyah,
-            // 'pekerjaanAyah' => $surat->pekerjaanAyah,
-            // 'alamatAyah' => $surat->alamatAyah,
+            'nikAyah' => $ayah->nik,
+            'namaAyah' => $ayah->nama,
+            'tanggalLahirAyah' =>$tanggalLahirAyah,
+            'umurAyah' => $surat->umurAyah,
+            'pekerjaanAyah' => $ayah->pekerjaan,
+            'alamatAyah' => $kk->alamat,
+            'kewarganegaraanAyah' => $ayah->kewarganegaraan,
 
-            'ibu' => $surat->ibu,
-            // 'namaIbu' => $surat->namaIbu,
-            // 'tanggalLahirIbu' => $surat->tanggalLahirIbu,
-            // 'umurIbu' => $surat->umurIbu,
-            // 'pekerjaanIbu' => $surat->pekerjaanIbu,
-            // 'alamatIbu' => $surat->alamatIbu,
+
+            'nikIbu' => $ibu->nik,
+            'namaIbu' => $ibu->nama,
+            'tanggalLahirIbu' =>$tanggalLahirIbu,
+            'umurIbu' => $surat->umurIbu,
+            'pekerjaanIbu' => $ibu->pekerjaan,
+            'alamatIbu' => $kk->alamat,
+            'kewarganegaraanIbu' => $ibu->kewarganegaraan,
+            'tanggalPerkawinan'=> $surat->tanggalPerkawinan,
 
             'nikSaksi1' => $saksi1->nikPerangkat,
             'namaSaksi1' => $saksi1->nama,
             'tanggalLahirSaksi1' => $saksi1->tanggalLahir,
             'umurSaksi1' => $surat->umurSaksi1,
-            'pekerjaanSaksi1' => $saksi1->pekerjaan,
+            'pekerjaanSaksi1' => $saksi1->detail,
             'alamatSaksi1' => $saksi1->alamat,
 
             'nikSaksi2' => $saksi2->nikPerangkat,
             'namaSaksi2' => $saksi2->nama,
             'tanggalLahirSaksi2' => $saksi2->tanggalLahir,
             'umurSaksi2' => $surat->umurSaksi2,
-            'pekerjaanSaksi2' => $saksi2->pekerjaan,
+            'pekerjaanSaksi2' => $saksi2->detail,
             'alamatSaksi2' => $saksi2->alamat,
-            'kewarganegaraan' => $penduduk->kewarganegaraan,
         ]);
         return $pdf->stream();
     }
@@ -289,6 +294,6 @@ class KelahiranController extends Controller
     public function destroy(Kelahiran $kelahiran)
     {
         Kelahiran::destroy($kelahiran->idKelahiran);
-        return redirect('/kematian')->with('error', 'Data berhasil dihapus');
+        return redirect('/kelahiran')->with('error', 'Data berhasil dihapus');
     }
 }

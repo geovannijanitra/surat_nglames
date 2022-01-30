@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SURAT KETERANGAN PINDAH TEMPAT TINGGAL</title>
+	<title>SURAT KETERANGAN PINDAH TEMPAT TINGGAL No.{{ $noSurat }}</title>
 	<style type="text/css">
 		table {
 			border-style: double;

@@ -56,6 +56,8 @@ class KematianController extends Controller
     {
         $detailWarga = Penduduk::where('nik', $request->nik)->first();
         $keluarga = KK::where('noKk', $detailWarga->no_kk)->get();
+        $detailSaksi1 = Perangkat::where('idPerangkat', $request->saksi1)->first();
+        $detailSaksi2 = Perangkat::where('idPerangkat', $request->saksi2)->first();
         // $lahir = date_create($detailWarga->tanggal_lahir);
         // $now = date_create();
         // $diff = date_diff($lahir, $now);
@@ -63,17 +65,24 @@ class KematianController extends Controller
         $lahir = new DateTime($detailWarga['tanggalLahir']);
         $lahirAyah = new DateTime($request->tanggalLahirAyah);
         $lahirIbu = new DateTime($request->tanggalLahirIbu);
+        $lahirSaksi2 = new DateTime($detailSaksi2['tanggalLahir']);
+        $lahirSaksi1 = new DateTime($detailSaksi1['tanggalLahir']);
+
         $lahirPelapor = new DateTime($request->tanggalLahirPelapor);
         $now = \Carbon\Carbon::now('Asia/Jakarta');
 
         $interval = $lahir->diff($now);
         $intervalAyah = $lahirAyah->diff($now);
         $intervalIbu = $lahirIbu->diff($now);
+        $intervalSaksi1 = $lahirSaksi1->diff($now);
+        $intervalSaksi2 = $lahirSaksi2->diff($now);
         $intervalPelapor = $lahirPelapor->diff($now);
 
         $umurJenazah = $interval->format('%y');
         $umurAyah = $intervalAyah->format('%y');
         $umurIbu = $intervalIbu->format('%y');
+        $umurSaksi2 = $intervalSaksi2->format('%y');
+        $umurSaksi1 = $intervalSaksi1->format('%y');
         $umurPelapor = $intervalPelapor->format('%y');
 
         $bulan = $now->format('F');
@@ -150,6 +159,8 @@ class KematianController extends Controller
             'umurAyah' => $umurAyah,
             'umurIbu' => $umurIbu,
             'umurPelapor' => $umurPelapor,
+            'umurSaksi1' => $umurSaksi1,
+            'umurSaksi2' => $umurSaksi2,
             'alamatPelapor' => $request->alamatPelapor,
             'alamatAyah' => $request->alamatAyah,
             'alamatIbu' => $request->alamatIbu,

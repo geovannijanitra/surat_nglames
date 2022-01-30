@@ -15,14 +15,13 @@ class CreateKelahiranTable extends Migration
     {
         Schema::create('kelahiran', function (Blueprint $table) {
             $table->bigInteger('idKelahiran')->unique()->unsigned()->autoIncrement();
-            $table->bigInteger('tandatangan')->unsigned()->nullable();
-            $table->foreign('tandatangan')->references('idPerangkat')->on('perangkat')->onUpdate('cascade');
-            $table->bigInteger('nik')->unsigned();
-            $table->foreign('nik')->references('nik')->on('penduduk')->onUpdate('cascade');
-
-            $table->string('tanggalSurat');
             $table->string('noSurat');
             $table->string('jenisSurat');
+            $table->string('tanggalSurat');
+
+            $table->bigInteger('tandatangan')->unsigned()->nullable();
+            $table->foreign('tandatangan')->references('idPerangkat')->on('perangkat')->onUpdate('cascade');
+
 
             $table->string('namaAnak')->nullable();
             $table->string('kelaminAnak')->nullable();
@@ -41,6 +40,10 @@ class CreateKelahiranTable extends Migration
             $table->foreign('ibu')->references('nik')->on('penduduk')->onUpdate('cascade');
             $table->bigInteger('ayah')->unsigned()->nullable();
             $table->foreign('ayah')->references('nik')->on('penduduk')->onUpdate('cascade');
+            $table->string('tanggalPerkawinan')->nullable();
+            $table->string('umurAyah')->nullable();
+            $table->string('umurIbu')->nullable();
+
 
             $table->string('nikPelapor')->nullable();
             $table->string('namaPelapor')->nullable();
@@ -53,6 +56,9 @@ class CreateKelahiranTable extends Migration
             $table->foreign('saksi1')->references('idPerangkat')->on('perangkat')->onUpdate('cascade');
             $table->bigInteger('saksi2')->unsigned()->nullable();
             $table->foreign('saksi2')->references('idPerangkat')->on('perangkat')->onUpdate('cascade');
+
+            $table->string('umurSaksi1')->nullable();
+            $table->string('umurSaksi2')->nullable();
 
             $table->timestamps();
         });

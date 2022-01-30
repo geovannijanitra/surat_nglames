@@ -30,6 +30,33 @@ class PendudukSeeder extends Seeder
         'pendidikan'=> 'SD',
         'namaAyah'=> 'Laksamana Maeda',
         'namaIbu'=> 'Soekarni',
-        ]);
+        ]
+    );
+
+
+
+        DB::table('penduduk')->insert(
+            [
+                'nik' => '1234567890987653',
+                'no_kk' => '9988776655443322',
+                'nama' => 'Jesi',
+                'tempatLahir' => 'Nagasaki',
+                'tanggalLahir' => '1945-08-16',
+                'anakKe' => '1',
+                'kelamin' => 'Perempuan',
+                'agama' => 'Islam',
+                'status' => 'Kawin',
+                'statushubungan' => 'Istri',
+                'pekerjaan' => 'Karyawan Swasta',
+                'kewarganegaraan' => 'Warga Negara Asing',
+                'pendidikan' => 'SD',
+                'namaAyah' => 'Laksamana Maeda 3',
+                'namaIbu' => 'Soekarneya',
+            ],
+
+        );
+
+
+
     }
 }

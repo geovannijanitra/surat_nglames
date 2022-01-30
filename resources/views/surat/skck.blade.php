@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SKCK</title>
+	<title>SKCK No.{{ $noSurat }}</title>
 	<style type="text/css">
 		table {
 			border-style: double;

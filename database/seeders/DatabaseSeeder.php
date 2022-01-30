@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             PerangkatSeeder::class,
             KKSeeder::class,
             PendudukSeeder::class,
+            UserSeeder::class
         ]);
     }
 }

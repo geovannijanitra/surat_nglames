@@ -28,7 +28,7 @@
                     </div>
                     <div class="form-group">
                         <label for="noSurat">No Surat</label>
-                        <input id="noSurat" name="noSurat" type="number" placeholder="Nomor Surat" required
+                        <input id="noSurat" name="noSurat" type="text" placeholder="Nomor Surat" required
                             class="form-control">
                     </div>
                     <div class="col-md-6">
@@ -58,10 +58,10 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="keperluan">Ayah</label>
-                            <select class="form-control select2" placeholder="Nama" required id="nik" name="nik">
+                            <select class="form-control select2" placeholder="Nama Ayah" required id="ayah" name="ayah">
                             <option value="" disabled selected>Pilih Ayah </option>
-                            @foreach ($penduduk as $pndk)
-                            <option value="{{ $pndk->nik }}">{{ $pndk->nik}} - {{ $pndk->nama }}</option>
+                            @foreach ($ayah as $ayah)
+                            <option value="{{ $ayah->nik }}">{{ $ayah->nik}} - {{ $ayah->nama }}</option>
                             @endforeach
                         </select>
                         </div>
@@ -69,17 +69,17 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="keperluan">Ibu</label>
-                            <select class="form-control select2" placeholder="Nama" required id="nik" name="nik">
+                            <select class="form-control select2" placeholder="Nama Ibu" required id="ibu" name="ibu">
                                 <option value="" disabled selected>Pilih Ibu </option>
-                                @foreach ($penduduk as $pndk)
-                                <option value="{{ $pndk->nik }}">{{ $pndk->nik}} - {{ $pndk->nama }}</option>
+                                @foreach ($ibu as $ibu)
+                                <option value="{{ $ibu->nik }}">{{ $ibu->nik}} - {{ $ibu->nama }}</option>
                                 @endforeach
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="noSurat">Tanggal Perkawinan </label>
-                        <input id="tempatKematian" name="tempatKematian" type="date" placeholder="Masukkan Tempat Kematian" required
+                        <input id="tanggalPerkawinan" name="tanggalPerkawinan" type="date" placeholder="Masukkan Tanggal Perkawinan" required
                         class="form-control">
                     </div>
                     {{-- <div class="form-group">
@@ -96,18 +96,18 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="noSurat">Nama Anak </label>
-                        <input id="tempatKematian" name="tempatKematian" type="text" placeholder="Masukkan Tempat Kematian" required
+                        <input id="namaAnak" name="namaAnak" type="text" placeholder="Masukkan Nama Anak" required
                         class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="noSurat">Tempat Kelahiran </label>
-                        <input id="tempatKematian" name="tempatKematian" type="text" placeholder="Masukkan Tempat Kematian" required
+                        <input id="tempatKelahiran" name="tempatKelahiran" type="text" placeholder="Masukkan Tempat Kelahiran" required
                         class="form-control">
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="keperluan">Jenis Kelamin Anak</label>
-                            <select name="yangMenerangkan" class="form-control select2">
+                            <select name="kelaminAnak" class="form-control select2" required>
                                 <option value="" disabled selected>Pilih Jenis Kelamin Anak</option>
                                 <option value="Laki-Laki">Laki-Laki</option>
                                 <option value="Perempuan">Perempuan</option>
@@ -117,7 +117,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="keperluan">Tempat Dilahirkan</label>
-                            <select name="yangMenerangkan" class="form-control select2">
+                            <select name="tempatDilahirkan" class="form-control select2" required>
                                 <option value="" disabled selected>Pilih Yang Menerangkan</option>
                                 <option value="RS/RB">RS/RB</option>
                                 <option value="Puskesmas">Puskesmas</option>
@@ -130,28 +130,36 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="keperluan">Hari Kelahiran </label>
-                            <input id="tanggalKematian" name="tanggalKematian" type="text" placeholder="dd/mm/yyyy" required
-                                class="form-control">
+                            <select name="hariLahirAnak" class="form-control select2" required>
+                                <option value="" disabled selected>Pilih Hari Lahir Anak</option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Juma'at">Juma'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="keperluan">Tanggal Lahir</label>
-                            <input id="pukulKematian" name="pukulKematian" type="date" required
+                            <input id="tanggalLahirAnak" name="tanggalLahirAnak" type="date" required
                                 class="form-control">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="keperluan">Pukul Kelahiran</label>
-                            <input id="pukulKematian" name="pukulKematian" type="time" required
+                            <input id="pukulKelahiran" name="pukulKelahiran" type="time" required
                                 class="form-control">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="keperluan">Jenis Kelahiran </label>
-                            <select name="yangMenerangkan" class="form-control select2">
+                            <select name="jenisKelahiran" class="form-control select2" required>
                                 <option value="" disabled selected>Pilih Jenis Kelahiran</option>
                                 <option value="Tunggal">Tunggal</option>
                                 <option value="Kembar 2">Kembar 2</option>
@@ -164,7 +172,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="keperluan">Penolong Kelahiran</label>
-                            <select name="yangMenerangkan" class="form-control select2">
+                            <select name="penolongKelahiran" class="form-control select2" required>
                                 <option value="" disabled selected>Pilih Jenis Kelahiran</option>
                                 <option value="Dokter">Dokter</option>
                                 <option value="Bidan/Perawat">Bidan/Perawat</option>
@@ -176,7 +184,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="keperluan">Kelahiran ke</label>
-                            <input id="pukulKematian" name="pukulKematian" type="number" required
+                            <input id="kelahiranKe" name="kelahiranKe" type="number" required
                                 class="form-control">
                         </div>
                     </div>
@@ -184,14 +192,14 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="keperluan">Berat Anak</label>
-                            <input id="pukulKematian" name="pukulKematian" type="number" required
+                            <input id="beratBayi" name="beratBayi" type="number" required
                                 class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="keperluan">Panjang Anak</label>
-                            <input id="pukulKematian" name="pukulKematian" type="number" required
+                            <input id="panjangBayi" name="panjangBayi" type="number" required
                                 class="form-control">
                         </div>
                     </div>
@@ -226,7 +234,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="noSurat">Pekerjaan Pelapor</label>
-                                <input id="namaIbu" name="namaIbu" type="text" placeholder="Masukkan Nama Ibu Jenazah" required
+                                <input id="pekerjaanPelapor" name="pekerjaanPelapor" type="text" placeholder="Masukkan Pekerjaan Pelapor" required
                                     class="form-control">
                             </div>
                         </div>
@@ -293,7 +301,7 @@
                     <button class="btn btn-primary btn-custom btn-rounded waves-effect waves-lightt" type="submit">
                         Simpan
                     </button>
-                    <a href="/kematian" type="button" class="btn btn-warning btn-custom btn-rounded waves-effect waves-light">
+                    <a href="/kelahiran" type="button" class="btn btn-warning btn-custom btn-rounded waves-effect waves-light">
                         Kembali
                     </a>
                 </div>
