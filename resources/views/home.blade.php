@@ -12,46 +12,132 @@
     <div class="col-lg-12">
         <ul class="nav nav-tabs tabs">
             <li class="active tab">
-                <a href="#home-2" data-toggle="tab" aria-expanded="false">
+                <a href="#skdu-2" data-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-home"></i></span>
-                    <span class="hidden-xs">Home</span>
+                    <span class="hidden-xs">Keterangan Domisili Usaha</span>
                 </a>
             </li>
             <li class="tab">
-                <a href="#profile-2" data-toggle="tab" aria-expanded="false">
+                <a href="#skck-2" data-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
-                    <span class="hidden-xs">Profile</span>
+                    <span class="hidden-xs">SKCK</span>
                 </a>
             </li>
             <li class="tab">
-                <a href="#messages-2" data-toggle="tab" aria-expanded="true">
+                <a href="#sktm-2" data-toggle="tab" aria-expanded="true">
                     <span class="visible-xs"><i class="fa fa-envelope-o"></i></span>
-                    <span class="hidden-xs">Messages</span>
+                    <span class="hidden-xs">Keterangan Tidak Mampu</span>
                 </a>
             </li>
             <li class="tab">
-                <a href="#settings-2" data-toggle="tab" aria-expanded="false">
+                <a href="#skp-2" data-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-cog"></i></span>
-                    <span class="hidden-xs">Settings</span>
+                    <span class="hidden-xs">Keterangan Pindah</span>
+                </a>
+            </li>
+            <li class="tab">
+                <a href="#lahir-2" data-toggle="tab" aria-expanded="false">
+                    <span class="visible-xs"><i class="fa fa-cog"></i></span>
+                    <span class="hidden-xs">Keterangan Kelahiran</span>
+                </a>
+            </li>
+            <li class="tab">
+                <a href="#mati-2" data-toggle="tab" aria-expanded="false">
+                    <span class="visible-xs"><i class="fa fa-cog"></i></span>
+                    <span class="hidden-xs">Keterangan Kematian</span>
                 </a>
             </li>
         </ul>
             <div class="tab-content">
-                <div class="tab-pane active" id="home-2">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                <div class="tab-pane active" id="skdu-2">
+                    <p>Surat Keterangan Domisili Usaha (SKDU) adalah surat keterangan resmi dari Kelurahan dan/atau Kecamatan setempat yang menjelaskan bahwa benar adanya suatu usaha berlokasi di alamat atau domisili tertentu.</p>
+                    <br>
+                    <p>Cara membuat Surat Keterangan Domisili Usaha
+                        <ul>
+                            <li>Pastikan Data Penduduk sudah dimasukkan pada Data Keluarga</li>
+                            <li>Pastikan Data Pejabat yang bertanda-tangan sudah dimasukkan pada Data Perangkat Desa</li>
+                            <li>Jika sudah, buka menu Surat Keterangan Domisili di awal menu</li>
+                            <li>Isi Keterangan yang dibutuhkan</li>
+                            <li>Isi nomor surat</li>
+                            <li>Simpan kemudian cetak</li>
+                        </ul>
+                    </p>
                 </div>
-                <div class="tab-pane" id="profile-2">
-                    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                <div class="tab-pane" id="skck-2">
+                    <p>SKCK adalah surat keterangan catatan kepolisian, berisi keterangan resmi yang diterbitkan oleh Kepolisian Republik Indonesia (Polri), sebagai bukti penting bahwa orang yang bersangkutan berperilaku baik atau tidak pernah melakukan tindak kejahatan kriminal.</p>
+                    <br>
+                    <p>Cara membuat Surat Keterangan SKCK
+                        <ul>
+                            <li>Pastikan Data Penduduk sudah dimasukkan pada Data Keluarga</li>
+                            <li>Pastikan Data Pejabat yang bertanda-tangan sudah dimasukkan pada Data Perangkat Desa</li>
+                            <li>Jika sudah, buka menu Surat Keterangan untuk SKCK di awal menu</li>
+                            <li>Isi Keterangan  yang dibutuhkan</li>
+                            <li>Isi nomor surat</li>
+                            <li>Simpan kemudian cetak</li>
+                        </ul>
+                    </p>
                 </div>
-                <div class="tab-pane" id="messages-2">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                <div class="tab-pane" id="sktm-2">
+                    <p>Surat Keterangan Tidak Mampu (SKTM) merupakan surat yang dikeluarkan oleh pemerintah desa atau kelurahan untuk keluarga yang kurang mampu</p>
+                    <br>
+                    <p>Cara membuat Surat Keterangan Tidak Mampu (SKTM)
+                        <ul>
+                            <li>Pastikan Data Penduduk sudah dimasukkan pada Data Keluarga</li>
+                            <li>Pastikan Data Pejabat yang bertanda-tangan sudah dimasukkan pada Data Perangkat Desa</li>
+                            <li>Jika sudah, buka menu Surat Keterangan untuk Surat Keterangan Tidak Mampu (SKTM) di awal menu</li>
+                            <li>Isi Keterangan  yang dibutuhkan</li>
+                            <li>Isi nomor surat</li>
+                            <li>Simpan kemudian cetak</li>
+                        </ul>
+                    </p>
+                 </div>
+                <div class="tab-pane" id="skp-2">
+                    <p>Surat Keterangan Pindah digunakan sebagai dasar perekaman dalam data base kependudukan dan proses perubahan KK bagi Kepala/Anggota Keluarga yang tidak pindah.</p>
+                    <br>
+                    <p>Cara membuat Surat Keterangan Tidak Mampu (SKTM)
+                        <ul>
+                            <li>Pastikan Data Penduduk sudah dimasukkan pada Data Keluarga</li>
+                            <li>Pastikan Data Pejabat yang bertanda-tangan sudah dimasukkan pada Data Perangkat Desa</li>
+                            <li>Jika sudah, buka menu Surat Keterangan untuk Surat Keterangan Pindah di awal menu kemudian pilih tambah</li>
+                            <li>Isi Keterangan  yang dibutuhkan</li>
+                            <li>Masukkan data penduduk yang pindah, jika kosong masukkan tanda'-'</li>
+                            <li>Isi nomor surat</li>
+                            <li>Simpan kemudian kembali lalu cetak</li>
+                        </ul>
+                    </p>
                 </div>
-                <div class="tab-pane" id="settings-2">
-                    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                <div class="tab-pane" id="lahir-2">
+                    <p>Surat Keterangan Kelahiran merupakan surat keterangan lahir dari desa</p>
+                    <br>
+                    <p>Cara membuat Surat Keterangan Kelahiran
+                        <ul>
+                            <li>Pastikan Data Penduduk untuk Orang Tua sudah dimasukkan pada Data Keluarga</li>
+                            <li>Pastikan Data Pejabat yang bertanda-tangan sudah dimasukkan pada Data Perangkat Desa</li>
+                            <li>Pastikan Data Saksi 1 & Saksi 2 sudah dimasukkan pada Data Perangkat Desa dengan detail jabatan Ketua RT/RW</li>
+                            <li>Jika sudah, buka menu Surat Keterangan untuk Surat Keterangan Kelahiran di awal menu kemudian pilih tambah</li>
+                            <li>Isi Keterangan  yang dibutuhkan</li>
+                            <li>Isi data  untuk pelapor</li>
+                            <li>Isi nomor surat</li>
+                            <li>Simpan kemudian kembali lalu cetak</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="tab-pane" id="mati-2">
+                    <p>Surat keterangan kematian adalah surat keterangan (pengakuan dsb) yang disaksikan atau disahkan oleh suatu badan pemerintahan tingkat kelurahan atau desa yang dikeluarkan guna untuk membuat akta kematian atau kepentingan lainnya.</p>
+                    <br>
+                    <p>Cara membuat Surat Keterangan Kematian
+                        <ul>
+                            <li>Pastikan Data Penduduk untuk Jenazah sudah dimasukkan pada Data Keluarga</li>
+                            <li>Pastikan Data Pejabat yang bertanda-tangan sudah dimasukkan pada Data Perangkat Desa</li>
+                            <li>Pastikan Data Saksi 1 & Saksi 2 sudah dimasukkan pada Data Perangkat Desa dengan detail jabatan Ketua RT/RW</li>
+                            <li>Jika sudah, buka menu Surat Keterangan untuk Surat Keterangan Kematian di awal menu kemudian pilih tambah</li>
+                            <li>Isi Keterangan  yang dibutuhkan</li>
+                            <li>Isi nomor surat</li>
+                            <li>Isi data  untuk pelapor</li>
+                            <li>Isi data  untuk orang tua jenazah</li>
+                            <li>Simpan kemudian kembali lalu cetak</li>
+                        </ul>
+                    </p>
                 </div>
             </div>
     </div>

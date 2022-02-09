@@ -110,7 +110,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="noSurat">NIK Pelapor</label>
-                            <input id="nikPelapor" name="nikPelapor" type="number" placeholder="Masukkan NIK Pelapor"
+                            <input min="1111111111111111" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;" id="nikPelapor" name="nikPelapor" type="number" placeholder="Masukkan NIK Pelapor"
                                 class="form-control">
                         </div>
                         <div class="form-group">
@@ -146,7 +146,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="noSurat">NIK Ayah</label>
-                            <input id="nikAyah" name="nikAyah" type="number" placeholder="Masukkan NIK Ayah Jenazah"
+                            <input min="1111111111111111" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;" id="nikAyah" name="nikAyah" type="number" placeholder="Masukkan NIK Ayah Jenazah"
                                 class="form-control">
                         </div>
                         <div class="form-group">
@@ -173,7 +173,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="noSurat">NIK Ibu</label>
-                            <input id="nikIbu" name="nikIbu" type="text" placeholder="Masukkan NIK Ibu Jenazah"
+                            <input min="1111111111111111" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;" id="nikIbu" name="nikIbu" type="text" placeholder="Masukkan NIK Ibu Jenazah"
                                 class="form-control">
                         </div>
                         <div class="form-group">
